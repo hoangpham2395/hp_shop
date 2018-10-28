@@ -19,7 +19,7 @@
                         <h3 class="box-title">Add new employee</h3>
                     </div>
                     <div class="box-body">
-                        {!! Form::open(['route' => 'employees.store', 'method' => 'POST']) !!}
+                        {!! Form::open(['route' => 'employees.store', 'method' => 'POST', 'files' => true]) !!}
                             @include('backend.employees._form')
                         {!! Form::close() !!}
                     </div>

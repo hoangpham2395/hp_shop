@@ -19,7 +19,7 @@
                         <h3 class="box-title">Edit employee</h3>
                     </div>
                     <div class="box-body">
-                        {!! Form::model($entity, ['route' => ['employees.update', $entity->id], 'method' => 'PATCH']) !!}
+                        {!! Form::model($entity, ['route' => ['employees.update', $entity->id], 'method' => 'PATCH', 'files' => true]) !!}
                             @include('backend.employees._form')
                         {!! Form::close() !!}
                     </div>

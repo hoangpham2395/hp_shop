@@ -43,7 +43,7 @@
                                 @foreach ($entities as $entity)
                                     <tr>
                                         <td>{{ $entity->id }}</td>
-                                        <td><a href="{{route('employees.create')}}">{{ $entity->name }}</a></td>
+                                        <td><a href="{{route('employees.show', $entity->id)}}">{{ $entity->name }}</a></td>
                                         <td>{{ $entity->email }}</td>
                                         <td>{{ $entity->tel }}</td>
                                         <td>{{ $entity->address }}</td>

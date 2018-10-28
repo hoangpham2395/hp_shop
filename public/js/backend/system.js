@@ -1,4 +1,9 @@
 // Date picker
 $(function () {
-    $('.datepicker').datepicker();
+    $('.datepicker').datepicker({
+        todayHighlight: true,
+        autoclose: true,
+        format: 'dd/mm/yyyy',
+        //language: 'en'
+    });
 });
