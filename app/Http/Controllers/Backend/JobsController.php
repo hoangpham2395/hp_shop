@@ -13,5 +13,12 @@ use Illuminate\Http\Request;
  */
 class JobsController extends BackendController
 {
+	public function __construct(JobRepository $jobRepository, JobValidator $jobValidator, Job $job) 
+	{
+		$this->setRepository($jobRepository);
+		$this->setValidator($jobValidator);
+		$this->setAlias($job->getTable());
+		parent::__construct();
+	}
 
 }
