@@ -18,6 +18,49 @@
                     <i class="fa fa-dashboard"></i> <span>Dashboard</span>
                 </a>
             </li>
+            <li class="header">PRODUCTS</li>
+            <li id="products" class="treeview">
+                <a href="#">
+                    <i class="fa fa-mobile"></i> <span>Products</span>
+                    <span class="pull-right-container">
+                        <i class="fa fa-angle-left pull-right"></i>
+                    </span>
+                </a>
+                <ul class="treeview-menu">
+                    <li><a href="#"><i class="fa fa-list-ul"></i> List of Products</a></li>
+                    <li><a href="#"><i class="fa fa-plus"></i> Add new products</a></li>
+                </ul>
+            </li>
+            <li id="categories" class="treeview">
+                <a href="#">
+                    <i class="fa fa-barcode"></i> <span>Categories</span>
+                    <span class="pull-right-container">
+                        <i class="fa fa-angle-left pull-right"></i>
+                    </span>
+                </a>
+                <ul class="treeview-menu">
+                    <li><a href="{{route('categories.index')}}"><i class="fa fa-list-ul"></i> List of Categories</a></li>
+                    <li><a href="{{route('categories.create')}}"><i class="fa fa-plus"></i> Add new category</a></li>
+                </ul>
+            </li>
+            <li id="brands" class="treeview">
+                <a href="#">
+                    <i class="fa fa-apple"></i> <span>Brands</span>
+                    <span class="pull-right-container">
+                        <i class="fa fa-angle-left pull-right"></i>
+                    </span>
+                </a>
+                <ul class="treeview-menu">
+                    <li><a href="{{route('brands.index')}}"><i class="fa fa-list-ul"></i> List of Brands</a></li>
+                    <li><a href="{{route('brands.create')}}"><i class="fa fa-plus"></i> Add new brands</a></li>
+                </ul>
+            </li>
+            <li class="header">ORDERS</li>
+            <li id="orders">
+                <a href="#">
+                    <i class="fa fa-shopping-cart"></i> <span>List of Orders</span>
+                </a>
+            </li>
             <li class="header">EMPLOYEES</li>
             <li id="employees" class="treeview">
                 <a href="#">
@@ -27,12 +70,12 @@
                     </span>
                 </a>
                 <ul class="treeview-menu">
-                    <li><a href="#"><i class="fa fa-list-ul"></i> List of Employees</a></li>
-                    <li><a href="#"><i class="fa fa-plus"></i> Add new employees</a></li>
+                    <li><a href="{{route('employees.index')}}"><i class="fa fa-list-ul"></i> List of Employees</a></li>
+                    <li><a href="{{route('employees.create')}}"><i class="fa fa-plus"></i> Add new employees</a></li>
                 </ul>
             </li>
             <li id="jobs">
-                <a href="#">
+                <a href="{{route('jobs.index')}}">
                     <i class="fa fa-suitcase"></i> <span>Jobs</span>
                 </a>
             </li>
