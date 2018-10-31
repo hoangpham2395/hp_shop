@@ -4,7 +4,7 @@
     $urlImage = null;
 
     if (isset($entity)) {
-        $urlImage = $entity->getUrlAvatar();
+        $urlImage = $entity->getUrlImage();
     }
 
     if (Session::has($sessionImage)) {

@@ -1,12 +1,12 @@
-<?php
+<?php 
 
 namespace App\Model\Presenters;
 
-trait EmployeePresenter 
+trait BrandPresenter 
 {
 	public function getUrlImage()
     {
-        return (!$this->avatar || !file_exists(public_path($this->avatar))) ? getNoImage() : asset($this->avatar);
+        return (!$this->brand_image || !file_exists(public_path($this->brand_image))) ? getNoImage() : asset($this->brand_image);
     }
 
     public function getImage() 

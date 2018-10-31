@@ -50,7 +50,7 @@
                                             </tr>
                                             <tr>
                                                 <th>Avatar</th>
-                                                <td>{!! $entity->getAvatar() !!}</td>
+                                                <td>{!! $entity->getImage() !!}</td>
                                             </tr>
                                             <tr>
                                                 <th>Address</th>

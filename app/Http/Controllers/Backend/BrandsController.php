@@ -13,5 +13,12 @@ use Illuminate\Http\Request;
  */
 class BrandsController extends BackendController
 {
+	public function __construct(BrandRepository $brandRepository, BrandValidator $brandValidator, Brand $brand) 
+	{
+		$this->setRepository($brandRepository);
+		$this->setValidator($brandValidator);
+		$this->setAlias($brand->getTable());
+		parent::__construct();
+	}
 
 }

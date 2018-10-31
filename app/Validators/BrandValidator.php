@@ -6,5 +6,8 @@ use App\Validators\Base\BaseValidator;
 
 class BrandValidator extends BaseValidator {
 
-    protected $rules = [];
+    protected $rules = [
+    	'brand_name' => 'required',
+    	'brand_image' => 'nullable|mimes:jpeg,png,gif,jpg'
+    ];
 }
