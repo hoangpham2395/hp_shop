@@ -84,46 +84,8 @@
                                         <td>{{ $entity->brand_name }}</td>
                                         <td>{!! $entity->getImage() !!}</td>
                                         <td class="text-center">
-                                            <button type="button" class="btn btn-sm btn-primary" data-toggle="modal" data-target="#modal_upd_{{$entity->id}}"><i class="fa fa-pencil"></i></button>
+                                            <a class="btn btn-sm btn-primary" href="{{route('brands.edit', $entity->id)}}"><i class="fa fa-pencil"></i></button>
                                         </td>
-
-										{!! Form::model($entity, ['route' => ['brands.update', $entity->id], 'method' => 'PATCH']) !!}
-                                    	<!-- Modal -->
-                                        <div class="modal fade" id="modal_upd_{{$entity->id}}" tabindex="-1" role="dialog"
-                                             aria-labelledby="myModalLabel">
-                                            <div class="modal-dialog" role="document">
-                                                <div class="modal-content">
-                                                    <div class="modal-header">
-                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                            <span aria-hidden="true">&times;</span>
-                                                        </button>
-                                                        <h4 class="modal-title" id="myModalLabel">Update</h4>
-                                                    </div>
-                                                    <div class="modal-body">
-                                                    	<div class="row">
-	                                                        <div class="col-md-12">
-		                                                		<div class="form-group">
-		                                                			{!! Form::label('brand_name', 'Brand name:') !!} 
-		                                                			<span class="color-red">[<i class="fa fa-asterisk"></i>]</span>
-		                                                			<div class="input-group">
-		                                                				<span class="input-group-addon">
-		                                                					<i class="fa fa-suitcase"></i>
-		                                                				</span>
-		                                                				{!! Form::text('brand_name', null, ['class' => 'form-control', 'required']) !!}
-		                                                			</div>
-		                                                		</div>
-		                                                	</div>
-		                                                </div>
-                                                    </div>
-                                                    <div class="modal-footer">
-                                                        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-                                                        <button type="submit" class="btn btn-success">Confirm</button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        {!! Form::close() !!}
-
                                         <td class="text-center">
                                             <button type="button" class="btn btn-sm btn-danger" data-toggle="modal"
                                                     data-target="#modal_del_{{$entity->id}}">
