@@ -6,7 +6,7 @@
             <small>Edit brand</small>
         </h1>
         <ol class="breadcrumb">
-            <li><a href="{{route('brands.index')}}"><i class="fa fa-user"></i> Brands</a></li>
+            <li><a href="{{route('brands.index')}}"><i class="fa fa-apple"></i> Brands</a></li>
             <li class="active">Edit brand</li>
         </ol>
     </section>
@@ -22,7 +22,7 @@
                     <div class="box-body">
                         <div class="row">
                             <div class="col-sm-12">
-                                {!! Form::model($entity, ['route' => ['brands.update', $entity->id], 'method' => 'POST', 'files' => true]) !!}
+                                {!! Form::model($entity, ['route' => ['brands.update', $entity->id], 'method' => 'PATCH', 'files' => true]) !!}
                                     @include('backend.brands._form')
                                 {!! Form::close() !!}
                             </div>

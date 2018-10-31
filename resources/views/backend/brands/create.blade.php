@@ -6,7 +6,7 @@
             <small>Add new brand</small>
         </h1>
         <ol class="breadcrumb">
-            <li><a href="{{route('brands.index')}}"><i class="fa fa-user"></i> Brands</a></li>
+            <li><a href="{{route('brands.index')}}"><i class="fa fa-apple"></i> Brands</a></li>
             <li class="active">Add new brand</li>
         </ol>
     </section>
