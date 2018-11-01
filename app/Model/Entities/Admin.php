@@ -8,12 +8,12 @@ use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use App\Model\Scopes\Base\BaseScope;
 use Illuminate\Support\Facades\Hash;
-use App\Model\Base\Auth;
+use App\Model\Base\BaseAuth;
 
 /**
  * 
  */
-class Admin extends Auth
+class Admin extends BaseAuth
 {
 	use Notifiable;
 	use AdminPresenter;
