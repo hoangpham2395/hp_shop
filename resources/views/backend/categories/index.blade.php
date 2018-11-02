@@ -82,7 +82,7 @@
                                 @foreach ($entities as $entity)
                                     <tr>
                                         <td class="text-center">{{ $entity->id }}</td>
-                                        <td>{{ $entity->brand_name }}</td>
+                                        <td>{{ $entity->category_name }}</td>
                                         <td>{!! $entity->getImage() !!}</td>
                                         <td>{{ $entity->getParentName() }}</td>
                                         <td class="text-center">

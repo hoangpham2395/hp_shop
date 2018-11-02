@@ -43,4 +43,9 @@ function getMediaUrl($alias = null)
 	}
 	return $url . '/' . $alias;
 }
+
+function getCurrentUser() 
+{
+	return Auth::user();
+}
 ?>

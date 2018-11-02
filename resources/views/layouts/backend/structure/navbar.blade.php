@@ -16,14 +16,14 @@
                 <li class="dropdown user user-menu">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                         <img src="{{getAvatarDefault()}}" class="user-image" alt="User Image">
-                        <span class="hidden-xs">Admin</span>
+                        <span class="hidden-xs">{{ getCurrentUser()->name }}</span>
                     </a>
                     <ul class="dropdown-menu">
                         <!-- User image -->
                         <li class="user-header">
                             <img src="{{getAvatarDefault()}}" class="img-circle" alt="User Image">
                             <p>
-                                Admin - Admin of <strong>{{getConstant('APP_NAME')}}</strong>
+                                {{ getCurrentUser()->name }} - Admin of <strong>{{getConstant('APP_NAME')}}</strong>
                                 <small>Super admin</small>
                             </p>
                         </li>
@@ -42,7 +42,7 @@
                                 <a href="#" class="btn btn-default btn-flat">Profile</a>
                             </div>
                             <div class="pull-right">
-                                <a href="#" class="btn btn-default btn-flat">Sign out</a>
+                                <a href="{{route('admin.logout')}}" class="btn btn-default btn-flat">Sign out</a>
                             </div>
                         </li>
                     </ul>
