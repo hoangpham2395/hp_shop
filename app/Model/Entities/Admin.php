@@ -30,6 +30,16 @@ class Admin extends BaseAuth
 		static::addGlobalScope(new BaseScope);
 	}
 
+	// Admin not save token
+	public function save(array $options = array()) 
+	{
+	    if(isset($this->remember_token)) {
+	        unset($this->remember_token);
+	    }
+
+	    return parent::save($options);
+	}
+
 	public function setPasswordAttribute($value) 
 	{
 		$this->attributes['password'] = Hash::make($value);
