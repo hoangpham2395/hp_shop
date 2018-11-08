@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('layouts.backend.structure.main');
+    return "It's HP Shop.";
 });
 
 // Route backend
@@ -24,6 +24,7 @@ Route::prefix('management')->group(function () {
 	Route::middleware(['isAdmin'])->group(function () {
 		Route::resource('admin', 'Backend\AdminController');
 		Route::get('dashboard', ['as' => 'dashboard', 'uses' => 'Backend\DashboardController@index']);
+		Route::get('/', ['as' => 'dashboard', 'uses' => 'Backend\DashboardController@index']);
 		Route::resource('employees', 'Backend\EmployeesController');
 		Route::resource('jobs', 'Backend\JobsController');
 		Route::resource('orders', 'Backend\OrdersController');

@@ -2,19 +2,19 @@
 <div class="row">
     <div class="col-md-6">
         <div class="form-group">
-            {!! Form::label('name', 'Name:') !!} <span class="color-red">[<i class="fa fa-asterisk"></i>]</span>
+            {!! Form::label('name', getTitle('employees.name')) !!} <span class="required"></span>
             <div class="input-group">
                 <span class="input-group-addon"><i class="fa fa-user"></i></span>
-                {!! Form::text('name', null, ['class' => 'form-control', 'placeholder' => 'Enter name']) !!}
+                {!! Form::text('name', null, ['class' => 'form-control', 'placeholder' => getTitle('employees.name')]) !!}
             </div>
         </div>
     </div>
     <div class="col-md-6">
         <div class="form-group">
-            {!! Form::label('email', 'Email:') !!} <span class="color-red">[<i class="fa fa-asterisk"></i>]</span>
+            {!! Form::label('email', getTitle('employees.email')) !!} <span class="required"></span>
             <div class="input-group">
                 <span class="input-group-addon"><i class="fa fa-envelope-open"></i></span>
-                {!! Form::text('email', null, ['class' => 'form-control', 'placeholder' => 'Enter email']) !!}
+                {!! Form::text('email', null, ['class' => 'form-control', 'placeholder' => getTitle('employees.email')]) !!}
             </div>
         </div>
     </div>
@@ -22,19 +22,19 @@
 <div class="row">
     <div class="col-md-6">
         <div class="form-group">
-            {!! Form::label('tel', 'Phone:') !!} <span class="color-red">[<i class="fa fa-asterisk"></i>]</span>
+            {!! Form::label('tel', getTitle('employees.tel')) !!} <span class="required"></span>
             <div class="input-group">
                 <span class="input-group-addon"><i class="fa fa-phone"></i></span>
-                {!! Form::text('tel', null, ['class' => 'form-control', 'placeholder' => 'Enter phone']) !!}
+                {!! Form::text('tel', null, ['class' => 'form-control', 'placeholder' => getTitle('employees.tel')]) !!}
             </div>
         </div>
     </div>
     <div class="col-md-6">
         <div class="form-group">
-            {!! Form::label('birthday', 'Birthday:') !!} <span class="color-red">[<i class="fa fa-asterisk"></i>]</span>
+            {!! Form::label('birthday', getTitle('employees.birthday')) !!} <span class="required"></span>
             <div class="input-group">
                 <span class="input-group-addon"><i class="fa fa-birthday-cake"></i></span>
-                {!! Form::text('birthday', null, ['class' => 'datepicker form-control', 'placeholder' => 'Enter birthday']) !!}
+                {!! Form::text('birthday', null, ['class' => 'datepicker form-control', 'placeholder' => getTitle('employees.birthday')]) !!}
             </div>
         </div>
     </div>
@@ -42,7 +42,18 @@
 <div class="row">
     <div class="col-md-12">
         <div class="form-group">
-            {!! Form::label('avatar', 'Avatar:') !!}
+            {!! Form::label('address', getTitle('employees.address')) !!} <span class="required"></span>
+            <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-map-marker"></i></span>
+                {!! Form::text('address', null, ['class' => 'form-control', 'placeholder' => getTitle('employees.address')]) !!}
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <div class="form-group">
+            {!! Form::label('avatar', getTitle('employees.avatar')) !!}
             @include('layouts.backend.upload_image', ['image' => 'avatar'])
         </div>
     </div>
@@ -50,19 +61,19 @@
 <div class="row">
     <div class="col-md-6">
         <div class="form-group">
-            {!! Form::label('id_number', 'ID number:') !!} <span class="color-red">[<i class="fa fa-asterisk"></i>]</span>
+            {!! Form::label('id_number', getTitle('employees.id_number')) !!} <span class="required"></span>
             <div class="input-group">
                 <span class="input-group-addon"><i class="fa fa-user"></i></span>
-                {!! Form::text('id_number', null, ['class' => 'form-control', 'placeholder' => 'Enter id number']) !!}
+                {!! Form::text('id_number', null, ['class' => 'form-control', 'placeholder' => getTitle('employees.id_number')]) !!}
             </div>
         </div>
     </div>
     <div class="col-md-6">
         <div class="form-group">
-            {!! Form::label('bank_account', 'Bank account:') !!}
+            {!! Form::label('bank_account', getTitle('employees.bank_account')) !!}
             <div class="input-group">
                 <span class="input-group-addon"><i class="fa fa-bank"></i></span>
-                {!! Form::text('bank_account', null, ['class' => 'form-control', 'placeholder' => 'Enter bank account']) !!}
+                {!! Form::text('bank_account', null, ['class' => 'form-control', 'placeholder' => getTitle('employees.bank_account')]) !!}
             </div>
         </div>
     </div>
@@ -70,8 +81,8 @@
 <div class="row">
     <div class="col-md-12">
         <div class="form-group">
-            {!! Form::label('description', 'Description:') !!}
-            {!! Form::textarea('description', null, ['class' => 'form-control', 'placeholder' => 'Enter description', 'rows' => 5]) !!}
+            {!! Form::label('description', getTitle('employees.description')) !!}
+            {!! Form::textarea('description', null, ['class' => 'form-control', 'placeholder' => getTitle('employees.description'), 'rows' => 5]) !!}
         </div>
     </div>
 </div>

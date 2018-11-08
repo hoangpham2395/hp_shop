@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Backend;
 
 use App\Http\Controllers\Base\BackendController;
 use Illuminate\Http\Request;
+use Illuminate\Support\MessageBag;
 use Validator;
 use Auth;
 
@@ -11,6 +12,9 @@ class LoginController extends BackendController
 {
 	public function getLogin() 
 	{
+	    if (Auth::check()) {
+	        return redirect()->route('dashboard');
+        }
 		return view('backend.login.index');
 	}
 
@@ -33,7 +37,6 @@ class LoginController extends BackendController
 		}
 
 		$rememberMe = ($request->input('remember_me')) ? true : false;
-		//dd(Auth::guard('admin')->attempt($data, $rememberMe));
     	if (Auth::attempt($data, $rememberMe)) {
     		return redirect()->route('dashboard');
     	} 

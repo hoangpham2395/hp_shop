@@ -4,8 +4,6 @@ namespace App\Model\Entities;
 
 use App\Model\Presenters\AdminPresenter;
 use Illuminate\Notifications\Notifiable;
-use Illuminate\Contracts\Auth\MustVerifyEmail;
-use Illuminate\Foundation\Auth\User as Authenticatable;
 use App\Model\Scopes\Base\BaseScope;
 use Illuminate\Support\Facades\Hash;
 use App\Model\Base\BaseAuth;
@@ -20,7 +18,7 @@ class Admin extends BaseAuth
 
 	protected $table = 'admin';
 	protected $primaryKey = 'id';
-	protected $fillable = ['name', 'email', 'password', 'birth_day', 'avatar', 'role_type', 'ins_id', 'upd_id', 'del_flag'];
+	protected $fillable = ['email', 'password', 'employee_id', 'role_type', 'ins_id', 'upd_id', 'del_flag'];
 	protected $_alias = 'admin';
 
 	// Add global scope
@@ -30,29 +28,14 @@ class Admin extends BaseAuth
 		static::addGlobalScope(new BaseScope);
 	}
 
-	// Admin not save token
-	public function save(array $options = array()) 
-	{
-	    if(isset($this->remember_token)) {
-	        unset($this->remember_token);
-	    }
-
-	    return parent::save($options);
-	}
-
 	public function setPasswordAttribute($value) 
 	{
 		$this->attributes['password'] = Hash::make($value);
 	}
 
-	public function setBirthDayAttribute($value) 
-	{
-		$this->attributes['birth_day'] = date('Y-m-d', strtotime($value));
-	}
-
-	public function getBirthDayAttribute() 
-	{
-		return date('m/d/Y', strtotime($this->attributes['birth_day']));
-	}
+	public function employee()
+    {
+        return $this->hasOne('App\Model\Entities\Employee', 'id', 'employee_id');
+    }
 }
 ?>

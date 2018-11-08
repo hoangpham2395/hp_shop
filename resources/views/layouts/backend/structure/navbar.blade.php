@@ -16,14 +16,14 @@
                 <li class="dropdown user user-menu">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                         <img src="{{getAvatarDefault()}}" class="user-image" alt="User Image">
-                        <span class="hidden-xs">{{ getCurrentUser()->name }}</span>
+                        <span class="hidden-xs">{{ getCurrentUser()->email }}</span>
                     </a>
                     <ul class="dropdown-menu">
                         <!-- User image -->
                         <li class="user-header">
                             <img src="{{getAvatarDefault()}}" class="img-circle" alt="User Image">
                             <p>
-                                {{ getCurrentUser()->name }} - Admin of <strong>{{getConstant('APP_NAME')}}</strong>
+                                {{ getCurrentUser()->email }} - Admin of <strong>{{getConstant('APP_NAME')}}</strong>
                                 <small>Super admin</small>
                             </p>
                         </li>

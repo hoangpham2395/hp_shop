@@ -59,6 +59,19 @@
     margin-bottom: 0 !important;
 }
 
+.required {
+    color: red;
+}
+
+.required:before {
+    font-family: FontAwesome;
+    content: "[\f069]";
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: -5px;
+    padding-left: 2px;
+}
+
 /* Sidebar */
 .sidebar-custom {
     background-color: #1a2226 !important;
