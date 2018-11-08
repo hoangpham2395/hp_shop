@@ -16,11 +16,9 @@ class AdminSeeder extends Seeder
 
         // Init data
         $admin = [
-            'name' => 'administrator',
             'email' => 'admin@gmail.com',
             'password' => bcrypt('admin123'),
-            'birth_day' => date('Y-m-d', strtotime('10/10/2018')),
-            'avatar' => null,
+            'employee_id' => 1,
             'role_type' => '1',
             'ins_id' => 1,
             'upd_id' => null,

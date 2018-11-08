@@ -1,12 +1,12 @@
-# My base
+# HP Shop
 
 ## SYSTEM REQUIREMENT
 
 * DB: MySQL 5.6 
 * Apache: 2.4 
-* PHP: 7.0
+* PHP: 7.2
 * Laravel: 5.7 
-* Composer: 1.4.1
+* Composer: 1.7.3
 
 ## TEMPLATE
 
@@ -21,12 +21,14 @@
 * Bootstrap datepicker 1.6.4
 * iCheck
 * Google font
+* Form collective 5.4.0
+* Prettus L5-Repository 
 
 ## SETUP
 
 * Clone
 ```bash
-git clone https://github.com/hoangpham2395/mybase.git
+git clone https://github.com/hoangpham2395/hp_shop.git
 ```
 
 * Permission
@@ -71,26 +73,28 @@ composer require prettus/l5-repository
 
 * C:\Windows\System32\drivers\etc\hosts
 ```bash 
-127.0.0.1 dev.mybase.vn
+127.0.0.1 dev.hpshop.vn
 ```
 
 * C:\xampp\apache\conf\extra\httpd-vhosts.conf
 ```bash 
 <VirtualHost *:80>
-    DocumentRoot "{LOCAL_HTDOCS}\mybase\public"
-    ServerName dev.mybase.vn
+    DocumentRoot "{LOCAL_HTDOCS}\hp_shop\public"
+    ServerName dev.hpshop.vn
 </VirtualHost>
 <VirtualHost *:443>
-    DocumentRoot "{LOCAL_HTDOCS}\mybase\public"
-    ServerName dev.mybase.vn
+    DocumentRoot "{LOCAL_HTDOCS}\hp_shop\public"
+    ServerName dev.hpshop.vn
     SSLEngine on
     SSLCertificateFile "C:\xampp\apache\conf\ssl.crt\server.crt"
     SSLCertificateKeyFile "C:\xampp\apache\conf\ssl.key\server.key"
 </VirtualHost>
 ```
 
+* Restart apache in XAMPP
+
 ## RUN IN BROWSER
 
 ```bash 
-dev.mybase.vn
+dev.hpshop.vn
 ```
