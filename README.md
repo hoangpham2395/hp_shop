@@ -69,6 +69,11 @@ composer require "laravelcollective/html":"^5.4.0"
 composer require prettus/l5-repository
 ```
 
+* Config helper
+```bash
+composer dump-autoload
+```
+
 ## CONFIG URL
 
 * C:\Windows\System32\drivers\etc\hosts
