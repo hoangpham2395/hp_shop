@@ -20,5 +20,10 @@ class JobRepository extends CustomRepository
 	{
 		return JobValidator::class;
 	}
+
+	public function getListForEmployees() 
+	{
+		return $this->all()->pluck('job_name', 'id');
+	}
 }
 ?>

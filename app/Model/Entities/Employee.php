@@ -15,7 +15,7 @@ class Employee extends Base
 
 	protected $table = 'employees';
 	protected $primaryKey = 'id';
-	protected $fillable = ['name', 'email', 'tel', 'birthday', 'avatar', 'address', 'id_number', 'bank_account', 'description', 'ins_id', 'upd_id', 'del_flag'];
+	protected $fillable = ['name', 'email', 'tel', 'birthday', 'avatar', 'address', 'job_id', 'id_number', 'bank_account', 'description', 'ins_id', 'upd_id', 'del_flag'];
 	protected $_alias = 'employees';
 
 	// Add global scope

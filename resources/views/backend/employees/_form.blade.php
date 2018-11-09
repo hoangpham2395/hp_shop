@@ -40,12 +40,21 @@
     </div>
 </div>
 <div class="row">
-    <div class="col-md-12">
+    <div class="col-md-6">
         <div class="form-group">
             {!! Form::label('address', getTitle('employees.address')) !!} <span class="required"></span>
             <div class="input-group">
                 <span class="input-group-addon"><i class="fa fa-map-marker"></i></span>
                 {!! Form::text('address', null, ['class' => 'form-control', 'placeholder' => getTitle('employees.address')]) !!}
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="form-group">
+            {!! Form::label('job_id', getTitle('employees.job_id')) !!} <span class="required"></span>
+            <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-suitcase"></i></span>
+                {!! Form::select('job_id', $params['jobs'], null, ['class' => 'form-control', 'placeholder' => '--- Select job ---']) !!}
             </div>
         </div>
     </div>
