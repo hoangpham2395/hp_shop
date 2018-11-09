@@ -57,6 +57,10 @@
                                                 <td>{{ $entity->address }}</td>
                                             </tr>
                                             <tr>
+                                                <th>Job</th>
+                                                <td>{{ !empty($entity->job) ? $entity->job->job_name : '' }}</td>
+                                            </tr>
+                                            <tr>
                                                 <th>ID number</th>
                                                 <td>{{ $entity->id_number }}</td>
                                             </tr>
