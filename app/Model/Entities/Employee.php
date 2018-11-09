@@ -34,4 +34,9 @@ class Employee extends Base
 	{
 		return date('d/m/Y', strtotime($this->attributes['birthday']));
 	}
+
+	public function job() 
+	{
+		return $this->hasOne('App\Model\Entities\Job', 'id', 'job_id');
+	}
 }
