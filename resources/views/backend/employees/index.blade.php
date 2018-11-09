@@ -12,7 +12,43 @@
     </section>
 
     @include('layouts.backend.notify')
-
+    <section class="content">
+        <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="box box-danger">
+                    <div class="box-header">
+                        <h3 class="box-title">Search</h3>
+                    </div>
+                    <div class="box-body">
+                        {!! Form::open(['route' => 'employees.index', 'method' => 'GET']) !!}
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        {!! Form::label('name', getTitle('employees.name')) !!}
+                                    </div>
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                                        {!! Form::text('name', Request::input('name'), ['class' => 'form-control']) !!}
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        {!! Form::label('email', getTitle('employees.email')) !!}
+                                    </div>
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
+                                        {!! Form::text('email', Request::input('email'), ['class' => 'form-control']) !!}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="margin-top"></div>
+                            @include('layouts.backend.btn_search')
+                        {!! Form::close() !!}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <section class="content">
         <div class="row">
             <div class="col-md-12 col-sm-12 col-xs-12">
@@ -31,11 +67,11 @@
                         <div class="table-responsive">
                             <table class="table table-bordered table-striped">
                                 <thead>
-                                <th width="50">ID</th>
-                                <th>Name</th>
-                                <th>Email</th>
-                                <th>Phone</th>
-                                <th>Address</th>
+                                <th width="50">{{getTitle('employees.id')}}</th>
+                                <th>{{getTitle('employees.name')}}</th>
+                                <th>{{getTitle('employees.email')}}</th>
+                                <th>{{getTitle('employees.tel')}}</th>
+                                <th>{{getTitle('employees.address')}}</th>
                                 <th width="50" class="text-center">Edit</th>
                                 <th width="50" class="text-center">Delete</th>
                                 </thead>
