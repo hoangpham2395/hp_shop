@@ -1,20 +1,31 @@
 @include('layouts.backend.errors')
 <div class="row">
-    <div class="col-md-6">
+    <div class="col-md-12">
         <div class="form-group">
-            {!! Form::label('name', 'Name:') !!} <span class="color-red">[<i class="fa fa-asterisk"></i>]</span>
+            {!! Form::label('employee_id', getTitle('admin.employee_id')) !!} <span class="required"></span>
             <div class="input-group">
                 <span class="input-group-addon"><i class="fa fa-user"></i></span>
-                {!! Form::text('name', null, ['class' => 'form-control', 'placeholder' => 'Enter name']) !!}
+                {!! Form::select('employee_id', $params['employees'], null, ['class' => 'form-control', 'placeholder' => '--- Select employee ---', 'onchange' => 'showInfoEmployeeInAdmin()']) !!}
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-6">
+        <div class="form-group">
+            {!! Form::label('email', getTitle('admin.email')) !!} <span class="required"></span>
+            <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-envelope-open"></i></span>
+                {!! Form::text('email', null, ['class' => 'form-control', 'placeholder' => getTitle('admin.email')]) !!}
             </div>
         </div>
     </div>
     <div class="col-md-6">
         <div class="form-group">
-            {!! Form::label('email', 'Email:') !!} <span class="color-red">[<i class="fa fa-asterisk"></i>]</span>
+            {!! Form::label('role_type', getTitle('admin.role_type')) !!} <span class="required"></span>
             <div class="input-group">
-                <span class="input-group-addon"><i class="fa fa-envelope-open"></i></span>
-                {!! Form::text('email', null, ['class' => 'form-control', 'placeholder' => 'Enter email']) !!}
+                <span class="input-group-addon"><i class="fa fa-eye"></i></span>
+                {!! Form::select('role_type', $params['role_type'], null, ['class' => 'form-control', 'placeholder' => '--- Select role type ---']) !!}
             </div>
         </div>
     </div>
@@ -23,50 +34,22 @@
     <div class="row">
         <div class="col-md-6">
             <div class="form-group">
-                {!! Form::label('password', 'Password:') !!} <span class="color-red">[<i class="fa fa-asterisk"></i>]</span>
+                {!! Form::label('password', getTitle('admin.password')) !!} <span class="required"></span>
                 <div class="input-group">
                     <span class="input-group-addon"><i class="fa fa-lock"></i></span>
-                    {!! Form::password('password', ['class' => 'form-control', 'placeholder' => 'Enter password']) !!}
+                    {!! Form::password('password', ['class' => 'form-control', 'placeholder' => getTitle('admin.password')]) !!}
                 </div>
             </div>
         </div>
         <div class="col-md-6">
             <div class="form-group">
-                {!! Form::label('confirm_password', 'Password confirmation:') !!} <span class="color-red">[<i class="fa fa-asterisk"></i>]</span>
+                {!! Form::label('confirm_password', getTitle('admin.confirm_password')) !!} <span class="required"></span>
                 <div class="input-group">
                     <span class="input-group-addon"><i class="fa fa-lock"></i></span>
-                    {!! Form::password('confirm_password', ['class' => 'form-control', 'placeholder' => 'Enter password confirmation']) !!}
+                    {!! Form::password('confirm_password', ['class' => 'form-control', 'placeholder' => getTitle('admin.confirm_password')]) !!}
                 </div>
             </div>
         </div>
     </div>
 @endif
-<div class="row">
-    <div class="col-md-6">
-        <div class="form-group">
-            {!! Form::label('birth_day', 'Birth day:') !!} <span class="color-red">[<i class="fa fa-asterisk"></i>]</span>
-            <div class="input-group">
-                <span class="input-group-addon"><i class="fa fa-birthday-cake"></i></span>
-                {!! Form::text('birth_day', null, ['class' => 'datepicker form-control', 'placeholder' => 'Enter birth day']) !!}
-            </div>
-        </div>
-    </div>
-    <div class="col-md-6">
-        <div class="form-group">
-            {!! Form::label('role_type', 'Role type:') !!} <span class="color-red">[<i class="fa fa-asterisk"></i>]</span>
-            <div class="input-group">
-                <span class="input-group-addon"><i class="fa fa-eye"></i></span>
-                {!! Form::select('role_type', $params['role_type'], null, ['class' => 'form-control', 'placeholder' => '--- Select role type ---']) !!}
-            </div>
-        </div>
-    </div>
-</div>
-<div class="row">
-    <div class="col-md-12">
-        <div class="form-group">
-            {!! Form::label('avatar', 'Avatar:') !!}
-            @include('layouts.backend.upload_image', ['image' => 'avatar'])
-        </div>
-    </div>
-</div>
 @include('layouts.backend.btn_form')

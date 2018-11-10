@@ -1,10 +1,13 @@
 <?php
 return [
     'admin' => [
+        'id' => 'ID',
         'email' => 'Email',
         'password' => 'Password',
         'employee_id' => 'Employee',
         'role_type' => 'Role type',
+        'password' => 'Password',
+        'confirm_password' => 'Password confirmation',
     ],
     'employees' => [
         'id' => 'ID',

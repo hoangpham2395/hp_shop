@@ -20,6 +20,11 @@ function getCurrentAdmin()
 	return Auth::user();
 }
 
+function getCurrentAdminId() 
+{
+	return Auth::user()->id;
+}
+
 function getAvatarDefault()
 {
     return asset(getConfig('avatar_default'));

@@ -10,6 +10,9 @@ return [
     'role_type' => [
         1 => 'Super admin',
         2 => 'Admin',
+        3 => 'Manager',
+        4 => 'Storekeeper', // Thủ kho
+        5 => 'Shipper',
     ],
 ];
 ?>
