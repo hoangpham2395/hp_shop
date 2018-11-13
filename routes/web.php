@@ -25,6 +25,7 @@ Route::prefix('management')->group(function () {
 		Route::resource('admin', 'Backend\AdminController');
 		Route::get('dashboard', ['as' => 'dashboard', 'uses' => 'Backend\DashboardController@index']);
 		Route::get('/', ['as' => 'dashboard', 'uses' => 'Backend\DashboardController@index']);
+		Route::get('get-employee-for-insert', ['as' => 'admin.getEmployeeForInsert', 'uses' => 'Backend\AdminController@getEmployeeForInsert']);
 		Route::resource('employees', 'Backend\EmployeesController');
 		Route::resource('jobs', 'Backend\JobsController');
 		Route::resource('orders', 'Backend\OrdersController');

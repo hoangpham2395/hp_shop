@@ -7,8 +7,3 @@ $(function () {
         //language: 'en'
     });
 });
-
-function showInshowInfoEmployeeInAdmin() {
-	$employeeId = $(this).val();
-	alert($employeeId);
-}

@@ -45,6 +45,18 @@ class AdminController extends BackendController
         $params = array_merge($params, parent::_prepareData());
         return $params;
     }
+
+    public function getEmployeeForInsert(Request $request)
+    {
+        $clientData = array('success' => false, 'message' => '', 'data' => '');
+        if ($request->ajax()) {
+            $employeeId = $request->query('employeeId');
+            $employee = $this->getEmployeeRepository()->findById($employeeId);
+            $clientData['success'] = true;
+            $clientData['data'] = $employee;
+        }
+        return response()->json($clientData);
+    }
 }
 
 ?>

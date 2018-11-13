@@ -52,4 +52,23 @@
         </div>
     </div>
 @endif
+
+<script>
+    function showInfoEmployeeInAdmin() {
+        var employeeId = document.getElementById('employee_id').value;
+        $.ajax({
+            url: "{{route('admin.getEmployeeForInsert')}}",
+            data: {
+                employeeId: employeeId
+            },
+            type: 'GET',
+            success: function (response) {
+                if (response.success) {
+                    $('input[name=email]').val(response.data['email']);
+                }
+            }
+        });
+    }
+</script>
+
 @include('layouts.backend.btn_form')
