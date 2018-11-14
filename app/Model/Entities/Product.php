@@ -21,4 +21,14 @@ class Product extends Base
 		parent::boot();
 		static::addGlobalScope(new BaseScope);
 	}
+
+	public function brand() 
+	{
+		return $this->hasOne('App\Model\Entities\Product', 'brand_id');
+	}
+
+	public function category() 
+	{
+		return $this->hasOne('App\Model\Entities\Category', 'category_id');
+	}
 }

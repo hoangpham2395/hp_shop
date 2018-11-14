@@ -110,3 +110,11 @@
 .info-box-icon > a > i {
 	color: #fff;
 }
+
+.inline {
+    display: inline-flex !important;
+}
+
+span.connect-input {
+    padding: 8px 10px 0 10px;
+}

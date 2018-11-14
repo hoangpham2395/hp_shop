@@ -22,4 +22,12 @@ return [
         'bank_account' => 'Bank account',
         'description' => 'Description',
     ],
+    'products' => [
+        'id' => 'ID',
+        'product_name' => 'Product name',
+        'brand_id' => 'Brand name',
+        'category_id' => 'Category name',
+        'price' => 'Price',
+        'sale' => 'Sale',
+    ],
 ];

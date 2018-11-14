@@ -9,7 +9,7 @@ use App\Validators\ProductValidator;
 /**
  * 
  */
-class AdminRepository extends CustomRepository
+class ProductRepository extends CustomRepository
 {
 	function model() 
 	{

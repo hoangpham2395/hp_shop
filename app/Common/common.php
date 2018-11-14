@@ -58,4 +58,8 @@ function getTitle($key)
 {
     return trans('model.' . $key);
 }
-?>
+
+function getBreadcrumb($key) 
+{
+	return trans('breadcrumb.' . $key);
+}
