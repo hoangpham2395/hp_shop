@@ -27,6 +27,6 @@ class Category extends Base
 
 	public function category() 
 	{
-		return $this->hasOne(Category::class, 'parent_id', 'id');
+		return $this->hasOne(Category::class, 'id', 'parent_id');
 	}
 }
