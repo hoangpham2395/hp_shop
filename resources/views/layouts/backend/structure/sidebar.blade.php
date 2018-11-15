@@ -14,82 +14,82 @@
         <!-- sidebar menu: : style can be found in sidebar.less -->
         <ul class="sidebar-menu" data-widget="tree">
             <li id="dashboard">
-                <a href="#">
-                    <i class="fa fa-dashboard"></i> <span>Dashboard</span>
+                <a href="{{route('dashboard')}}">
+                    <i class="fa fa-dashboard"></i> <span>{{getBreadcrumb('dashboard.name')}}</span>
                 </a>
             </li>
             <li class="header">PRODUCTS</li>
             <li id="products" class="treeview">
                 <a href="#">
-                    <i class="fa fa-mobile"></i> <span>Products</span>
+                    <i class="fa fa-mobile"></i> <span>{{getBreadcrumb('products.name')}}</span>
                     <span class="pull-right-container">
                         <i class="fa fa-angle-left pull-right"></i>
                     </span>
                 </a>
                 <ul class="treeview-menu">
-                    <li><a href="#"><i class="fa fa-list-ul"></i> List of Products</a></li>
-                    <li><a href="#"><i class="fa fa-plus"></i> Add new products</a></li>
+                    <li><a href="{{route('products.index')}}"><i class="fa fa-list-ul"></i> {{getBreadcrumb('products.index')}}</a></li>
+                    <li><a href="{{route('products.create')}}"><i class="fa fa-plus"></i> {{getBreadcrumb('products.add')}}</a></li>
                 </ul>
             </li>
             <li id="categories" class="treeview">
                 <a href="#">
-                    <i class="fa fa-barcode"></i> <span>Categories</span>
+                    <i class="fa fa-barcode"></i> <span>{{getBreadcrumb('categories.name')}}</span>
                     <span class="pull-right-container">
                         <i class="fa fa-angle-left pull-right"></i>
                     </span>
                 </a>
                 <ul class="treeview-menu">
-                    <li><a href="{{route('categories.index')}}"><i class="fa fa-list-ul"></i> List of Categories</a></li>
-                    <li><a href="{{route('categories.create')}}"><i class="fa fa-plus"></i> Add new category</a></li>
+                    <li><a href="{{route('categories.index')}}"><i class="fa fa-list-ul"></i> {{getBreadcrumb('categories.index')}}</a></li>
+                    <li><a href="{{route('categories.create')}}"><i class="fa fa-plus"></i> {{getBreadcrumb('categories.add')}}</a></li>
                 </ul>
             </li>
             <li id="brands" class="treeview">
                 <a href="#">
-                    <i class="fa fa-apple"></i> <span>Brands</span>
+                    <i class="fa fa-apple"></i> <span>{{getBreadcrumb('brands.name')}}</span>
                     <span class="pull-right-container">
                         <i class="fa fa-angle-left pull-right"></i>
                     </span>
                 </a>
                 <ul class="treeview-menu">
-                    <li><a href="{{route('brands.index')}}"><i class="fa fa-list-ul"></i> List of Brands</a></li>
-                    <li><a href="{{route('brands.create')}}"><i class="fa fa-plus"></i> Add new brands</a></li>
+                    <li><a href="{{route('brands.index')}}"><i class="fa fa-list-ul"></i> {{getBreadcrumb('brands.index')}}</a></li>
+                    <li><a href="{{route('brands.create')}}"><i class="fa fa-plus"></i> {{getBreadcrumb('brands.add')}}</a></li>
                 </ul>
             </li>
             <li class="header">ORDERS</li>
             <li id="orders">
                 <a href="#">
-                    <i class="fa fa-shopping-cart"></i> <span>List of Orders</span>
+                    <i class="fa fa-shopping-cart"></i> <span>{{getBreadcrumb('orders.index')}}</span>
                 </a>
             </li>
             <li class="header">EMPLOYEES</li>
             <li id="employees" class="treeview">
                 <a href="#">
-                    <i class="fa fa-users"></i> <span>Employees</span>
+                    <i class="fa fa-users"></i> <span>{{getBreadcrumb('employees.name')}}</span>
                     <span class="pull-right-container">
                         <i class="fa fa-angle-left pull-right"></i>
                     </span>
                 </a>
                 <ul class="treeview-menu">
-                    <li><a href="{{route('employees.index')}}"><i class="fa fa-list-ul"></i> List of Employees</a></li>
-                    <li><a href="{{route('employees.create')}}"><i class="fa fa-plus"></i> Add new employees</a></li>
+                    <li><a href="{{route('employees.index')}}"><i class="fa fa-list-ul"></i> {{getBreadcrumb('employees.index')}}</a></li>
+                    <li><a href="{{route('employees.create')}}"><i class="fa fa-plus"></i> {{getBreadcrumb('employees.add')}}</a></li>
                 </ul>
             </li>
             <li id="jobs">
                 <a href="{{route('jobs.index')}}">
-                    <i class="fa fa-suitcase"></i> <span>Jobs</span>
+                    <i class="fa fa-suitcase"></i> <span>{{getBreadcrumb('jobs.name')}}</span>
                 </a>
             </li>
             <li class="header">ADMIN</li>
             <li id="admin" class="treeview">
                 <a href="#">
-                    <i class="fa fa-user"></i> <span>Admin</span>
+                    <i class="fa fa-user"></i> <span>{{getBreadcrumb('admin.name')}}</span>
                     <span class="pull-right-container">
                         <i class="fa fa-angle-left pull-right"></i>
                     </span>
                 </a>
                 <ul class="treeview-menu">
-                    <li><a href="{{route('admin.index')}}"><i class="fa fa-list-ul"></i> List of Admin</a></li>
-                    <li><a href="{{route('admin.create')}}"><i class="fa fa-plus"></i> Add new admin</a></li>
+                    <li><a href="{{route('admin.index')}}"><i class="fa fa-list-ul"></i> {{getBreadcrumb('admin.index')}}</a></li>
+                    <li><a href="{{route('admin.create')}}"><i class="fa fa-plus"></i> {{getBreadcrumb('admin.add')}}</a></li>
                 </ul>
             </li>
         </ul>
