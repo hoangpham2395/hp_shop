@@ -32,7 +32,7 @@
                                     <div class="inline">
                                         {!! Form::text('price_min', Request::input('price_min'), ['class' => 'form-control']) !!}
                                         <span class="connect-input">~</span>
-                                        {!! Form::text('price_max', Request::input('price_min'), ['class' => 'form-control']) !!}
+                                        {!! Form::text('price_max', Request::input('price_max'), ['class' => 'form-control']) !!}
                                     </div>
                                 </div>
                             </div>
@@ -75,7 +75,7 @@
                                         <td><a href="{{route('products.show', $entity->id)}}">{{$entity->product_name}}</a></td>
                                         <td>{{ (!empty($entity->brand)) ? $entity->brand->brand_name : '' }}</td>
                                         <td>{{ (!empty($entity->category)) ? $entity->category->category_name : '' }}</td>
-                                        <td>{{ $entity->price }}</td>
+                                        <td>{{ $entity->getPrice() }}</td>
                                         <td class="text-center">
                                             <a href="{{route('products.edit', $entity->id)}}" class="btn btn-sm btn-primary">
                                                 <i class="fa fa-pencil"></i>

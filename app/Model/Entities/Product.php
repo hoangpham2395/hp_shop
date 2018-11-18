@@ -4,12 +4,15 @@ namespace App\Model\Entities;
 
 use App\Model\Base\Base;
 use App\Model\Scopes\Base\BaseScope;
+use App\Model\Presenters\ProductPresenter;
 
 /**
  * 
  */
 class Product extends Base
 {
+	use ProductPresenter;
+
 	protected $table = 'products';
 	protected $primaryKey = 'id';
 	protected $fillable = ['product_name', 'brand_id', 'category_id', 'price', 'sale', 'ins_id', 'upd_id', 'del_flag'];
