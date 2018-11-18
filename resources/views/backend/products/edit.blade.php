@@ -13,7 +13,7 @@
                     <div class="box-body">
                         <div class="row">
                             <div class="col-sm-12">
-                                {!! Form::model($entity, ['route' => ['products.update', $entity->id], 'method' => 'POST', 'files' => true]) !!}
+                                {!! Form::model($entity, ['route' => ['products.update', $entity->id], 'method' => 'PATCH', 'files' => true]) !!}
                                     @include('backend.products._form')
                                 {!! Form::close() !!}
                             </div>

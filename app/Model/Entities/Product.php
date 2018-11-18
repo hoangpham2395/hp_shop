@@ -24,11 +24,11 @@ class Product extends Base
 
 	public function brand() 
 	{
-		return $this->hasOne('App\Model\Entities\Product', 'brand_id');
+		return $this->hasOne('App\Model\Entities\Brand', 'id', 'brand_id');
 	}
 
 	public function category() 
 	{
-		return $this->hasOne('App\Model\Entities\Category', 'category_id');
+		return $this->hasOne('App\Model\Entities\Category', 'id', 'category_id');
 	}
 }

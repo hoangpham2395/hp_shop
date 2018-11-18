@@ -20,5 +20,10 @@ class CategoryRepository extends CustomRepository
 	{
 		return CategoryValidator::class;
 	}
+
+	public function getListForDropDown() 
+	{
+		return $this->all()->pluck('category_name', 'id');
+	}
 }
 ?>

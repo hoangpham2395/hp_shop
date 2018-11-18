@@ -20,5 +20,10 @@ class BrandRepository extends CustomRepository
 	{
 		return BrandValidator::class;
 	}
+
+	public function getListForDropDown() 
+	{
+		return $this->all()->pluck('brand_name', 'id');
+	}
 }
 ?>
