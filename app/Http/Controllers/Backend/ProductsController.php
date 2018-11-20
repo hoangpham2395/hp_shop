@@ -54,7 +54,8 @@ class ProductsController extends BackendController
 		$categories = $this->getCategoryRepository()->getListForDropDown();
 		$params = [
 			'brands' => $brands,
-			'categories' => $categories
+			'categories' => $categories,
+			'origin' => getConfig('origin'),
 		];
 		$params = array_merge($params, parent::_prepareData());
 		return $params;

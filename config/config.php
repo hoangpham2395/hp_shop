@@ -14,5 +14,11 @@ return [
         4 => 'Storekeeper', // Thủ kho
         5 => 'Shipper',
     ],
+    //Product
+    'origin' => [
+        1 => 'Hàng chính hãng',
+        2 => 'Hàng nhập khẩu',
+        3 => 'Hàng 99%',
+    ],
 ];
 ?>
