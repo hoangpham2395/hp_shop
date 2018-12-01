@@ -355,7 +355,7 @@
             {!! Form::label('type_sim', getTitle('products.type_sim')) !!} 
             <div class="input-group">
                 <span class="input-group-addon"><i class="fa fa-floppy-o"></i></span>
-                {!! Form::text('type_sim', null, ['class' => 'form-control', 'placeholder' => getTitle('products.type_sim')]) !!}
+                {!! Form::select('type_sim', $params['type_sim'], null, ['class' => 'form-control', 'placeholder' => 'Choose type sim...']) !!}
             </div>
         </div>
     </div>

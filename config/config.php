@@ -20,5 +20,10 @@ return [
         2 => 'Hàng nhập khẩu',
         3 => 'Hàng 99%',
     ],
+    'type_sim' => [
+        1 => 'SIM Thường',
+        2 => 'Micro SIM',
+        3 => 'Nano SIM',
+    ],
 ];
 ?>

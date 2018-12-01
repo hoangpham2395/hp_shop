@@ -56,6 +56,7 @@ class ProductsController extends BackendController
 			'brands' => $brands,
 			'categories' => $categories,
 			'origin' => getConfig('origin'),
+			'type_sim' => getConfig('type_sim'),
 		];
 		$params = array_merge($params, parent::_prepareData());
 		return $params;

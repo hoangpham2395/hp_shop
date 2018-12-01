@@ -2,7 +2,7 @@
 
 function getConstant($key, $default = null)
 {
-    return config('constant.' . $key, $default);
+	return config('constant.' . $key, $default);
 }
 
 function getMessaage($key) 
@@ -27,7 +27,7 @@ function getCurrentAdminId()
 
 function getAvatarDefault()
 {
-    return asset(getConfig('avatar_default'));
+	return asset(getConfig('avatar_default'));
 }
 
 function getNoImage() 
@@ -56,10 +56,19 @@ function getCurrentUser()
 
 function getTitle($key)
 {
-    return trans('model.' . $key);
+	return trans('model.' . $key);
 }
 
 function getBreadcrumb($key) 
 {
 	return trans('breadcrumb.' . $key);
+}
+
+function logError($message, array $context = [])
+{
+	try {
+		ChannelLog::error('error', $message, $context);
+	} catch (\Exception $e) {
+
+	}
 }

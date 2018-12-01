@@ -56,7 +56,7 @@ class BackendController extends BaseController
     protected function _prepareStore()
     {
         // Get current admin
-        $params['ins_id'] = 1;
+        $params['ins_id'] = getCurrentAdminId();
         // Get file input if exist
         if (Session::has('current_file_field')) {
             $fileName = date('YmdHis') . '_' . Session::get('current_file_name');
@@ -68,7 +68,7 @@ class BackendController extends BaseController
     protected function _prepareUpdate()
     {
         // Get current admin
-        $params['upd_id'] = 1;
+        $params['upd_id'] = getCurrentAdminId();
         // Get file input if exist
         if (Session::has('current_file_field')) {
             $fileName = date('YmdHis') . '_' . Session::get('current_file_name');
@@ -138,6 +138,7 @@ class BackendController extends BaseController
             return redirect()->route($this->getAlias() . '.index');
         } catch (\Exception $e) {
             DB::rollBack();
+            logError($e);
         }
         // Create failed
         $this->_deleteFileInTmpIfExist();
@@ -175,6 +176,7 @@ class BackendController extends BaseController
             return redirect()->route($this->getAlias() . '.index');
         } catch (\Exception $e) {
             DB::rollBack();
+            logError($e);
         }
         // Update failed
         $this->_deleteFileInTmpIfExist();
@@ -200,6 +202,7 @@ class BackendController extends BaseController
             return redirect()->route($this->getAlias() . '.index');
         } catch(\Exception $e) {
             DB::rollBack();
+            logError($e);
         }
         // Delete failed
         return redirect()->route($this->getAlias() . '.index')->withErrors(['delete_failed' => getMessaage('delete_failed')]);
