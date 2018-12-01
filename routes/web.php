@@ -11,9 +11,20 @@
 |
 */
 
-Route::get('/', function () {
-    return "It's HP Shop.";
-});
+// Route frontend
+Route::get('/', ['as' => 'home.index', 'uses' => 'Frontend\HomeController@index']);
+Route::get('/tim-kiem', ['as' => 'home.search', 'uses' => 'Frontend\HomeController@search']);
+Route::get('/dien-thoai', ['as' => 'frontend.product.index', 'uses' => 'Frontend\ProductController@index']);
+Route::get('/samsung', ['as' => 'frontend.product.samsung', 'uses' => 'Frontend\ProductController@samsung']);
+Route::get('/iphone', ['as' => 'frontend.product.iphone', 'uses' => 'Frontend\ProductController@iphone']);
+Route::get('/xiaomi', ['as' => 'frontend.product.xiaomi', 'uses' => 'Frontend\ProductController@xiaomi']);
+Route::get('/nokia', ['as' => 'frontend.product.nokia', 'uses' => 'Frontend\ProductController@nokia']);
+Route::get('/hang-99%', ['as' => 'frontend.product.secondhand', 'uses' => 'Frontend\ProductController@secondhand']);
+Route::get('/hang-thanh-ly', ['as' => 'frontend.product.hangthanhly', 'uses' => 'Frontend\ProductController@hangThanhLy']);	
+Route::get('/phu-kien', ['as' => 'frontend.product.phukien', 'uses' => 'Frontend\ProductController@phuKien']);
+Route::get('/tin-tuc', ['as' => 'frontend.product.news', 'uses' => 'Frontend\ProductController@news']);
+Route::get('/mua-tra-gop', ['as' => 'frontend.product.muatragop', 'uses' => 'Frontend\ProductController@muaTraGop']);
+Route::get('/mua-tu-xa', ['as' => 'frontend.product.muatuxa', 'uses' => 'Frontend\ProductController@muaTuXa']);
 
 // Route backend
 Route::prefix('management')->group(function () {
