@@ -65,3 +65,140 @@ $(function() {
     'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
     f.parentNode.insertBefore(j, f);
 })(window, document, 'script', 'dataLayer', 'GTM-MKBHS2G');
+
+$(document).ready(function(){
+    $('.close_popup img').click(function(){
+        $('.banners .layout').hide();
+    })
+});
+
+jQuery(document).ready(function () {
+    jQuery(".chat_fb").click(function() {
+        jQuery('.fchat').toggle('slow');
+    });
+});
+
+function ajaxSearch() {
+    var input_data = $('#search_data').val();
+    if (input_data.length === 0) {
+        $('#suggestions').hide();
+    } else {
+        var post_data = {
+            'search_data': input_data
+        };
+        $.ajax({
+            type: "POST",
+            url: base_url + "bluesoft_c/autocomplete/",
+            data: post_data,
+            success: function (data) {
+                if (data.length > 0) {
+                    $('#suggestions').show();
+                    $('#autoSuggestionsList').html(data);
+                }
+            }
+        });
+    }
+}
+
+function ajaxSearchPro() {
+    var input_data = $('#search_text').val();
+    type = $('#searchtype').val();
+    firstpro = $('#firstpro').val();
+    if (input_data.length === 0) {
+        $('#result').hide();
+    } else {
+        var post_data = {
+            'search_data': input_data,
+            'type':type,
+            'firstpro':firstpro,
+        };
+        $.ajax({
+            type: "POST",
+            url: base_url + "bluesoft_c/searchsosanh/",
+            data: post_data,
+            success: function (data) {
+                if (data.length > 0) {
+                    $('#result').show();
+                    $('#resultList').html(data);
+                }
+            }
+        });
+    }
+}
+
+page = 1;
+
+$('.loadmore').click(function(){
+    page++;
+    cat = $('#getcat').val();
+    order = $('#order').val();
+    home = $('#home').val();
+    stt= '0';
+    range = '';
+
+    $.ajax({
+        type: "POST",
+        url: base_url+ "bluesoft_c/loadmoreproduct/",
+        data:{
+            page:page,
+            cat:cat,
+            stt:stt,
+            order:order,
+            range:range,
+            home:home
+        },
+        success: function(data) {
+            if ($.trim(data)){
+                $('#append').append(data);
+            }else{
+                $('.loadmore').text('Hết rồi');
+            }
+        }
+    });
+});
+
+loadmore1('.desc-height','#desc-more','desc',493);
+loadmore('#faq-height','#lodmorefaq','faq',500);
+loadmore('#rvappend','#rvmore','rv',460);
+loadmore('#cmtmore','cmt',500);
+function loadmore(elm,btn,agurment,height){
+    agurment = $(elm).height();
+    x = height;
+    if (agurment > height+50) {
+        $(elm).height(height)
+        $(btn).click(function() {
+            a = height + x;
+            if (a >= agurment) {
+                a = agurment;
+                $(btn).hide();
+                $(elm).find('.frog').hide();
+            };
+            $(elm).height(a);
+            x=x+height;
+        });
+    }else{
+        $(btn).hide();
+        $(elm).find('.frog').hide();
+    }
+}
+
+function loadmore1(elm,btn,agurment,height){
+    agurment = $(elm).height();
+    x = height;
+    if (agurment > height+500) {
+        $(elm).height(height)
+        $(btn).click(function() {
+            a = height + 5000;
+            if (a >= agurment) {
+                a = agurment;
+                $(btn).hide();
+                $(elm).find('.frog').hide();
+            };
+            $(elm).height(a);
+            x=5000;
+        });
+    }else{
+        $(btn).hide();
+        $(elm).find('.frog').hide();
+    }
+}

@@ -11,7 +11,7 @@ class HomeController extends FrontendController
 	
 	public function index() 
 	{
-		return view('layouts.frontend.structure.main');
+		return view('frontend.home.index');
 	}
 
 	public function search() 

@@ -12,3 +12,93 @@
     top: 27px;
     right: -22px;
 }
+#header-change-location {
+    border: 1px solid grey;
+    padding-left: 25px;
+    -webkit-appearance: menulist !important;
+    -moz-appearance: menulist !important;
+    height: 30px;
+    vertical-align: middle;
+    background: transparent !important;
+    color: red;
+}
+#header-change-location-mobile {
+    border: 1px solid grey;
+    padding-left: 25px;
+    -webkit-appearance: menulist !important;
+    -moz-appearance: menulist !important;
+    height: 30px;
+    vertical-align: middle;
+    background-image: none !important;
+    background-position: unset !important;
+    background-size: unset !important;
+    background-repeat: unset !important;
+}
+.banners-fixed {
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    z-index: 1;
+}
+.banners-fixed .row {
+    position: relative;
+}
+.banners-fixed .row .fixed_close {
+    background: url(../images/211.png) no-repeat center center transparent;
+    border: none;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+.close_popup{
+    top: 0;
+    position: absolute;
+    right: 0;
+    cursor: pointer;
+}
+@media (min-width: 3px){
+    .layout {
+        width: 960px;
+        margin:auto;
+    }
+}
+@media (min-width: 2px){
+    .layout {
+        width: 960px;
+        margin:auto;
+    }
+}
+#cfacebook { 
+	position:fixed;
+	bottom:0px;
+	left:20px;
+	z-index:999999999999999;
+	width:250px;
+	height:auto;
+	overflow:hidden; 
+} 
+#cfacebook .fchat { 
+	float:left;width:100%;
+	height:270px;
+	overflow:hidden;
+	display:none;
+	background-color:#fff; 
+} 
+#cfacebook .fchat .fb-page { 
+	margin-top:-130px;
+	float:left; 
+} 
+#cfacebook a.chat_fb { 
+	float:left;padding:0 12px;
+	width:250px;
+	color:#fff;
+	text-decoration:none;
+	height:40px;
+	line-height:40px;
+	text-shadow:0 1px 0 rgba(0,0,0,0.1);
+	background-color:#3a5795;
+	border:0;
+	z-index:9999999;
+	margin-right:12px;
+	font-size:18px; 
+} 
