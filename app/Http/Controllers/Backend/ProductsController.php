@@ -105,7 +105,7 @@ class ProductsController extends BackendController
             if ($request->hasFile('image')) {
             	$dataImage = [
 	            	'product_id' => $nextId,
-	            	'image' => $$data['image'], 
+	            	'image' => $data['image'], 
 	            	'type' => 1, 
 	            	'ins_id' => getCurrentAdminId()
 	            ];
