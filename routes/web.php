@@ -43,5 +43,6 @@ Route::prefix('management')->group(function () {
 		Route::resource('products', 'Backend\ProductsController');
 		Route::resource('brands', 'Backend\BrandsController');
 		Route::resource('categories', 'Backend\CategoriesController');
+		Route::post('products/upload-image', ['as' => 'products.uploadImage', 'uses' => 'Backend\ProductsController@uploadImage']);
 	});
 });

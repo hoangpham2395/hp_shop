@@ -25,5 +25,10 @@ return [
         2 => 'Micro SIM',
         3 => 'Nano SIM',
     ],
+    'product_image_type' => [
+        1 => 'Ảnh đại diện',
+        2 => 'Ảnh bán chạy',
+        3 => 'Ảnh slide',
+    ],
 ];
 ?>

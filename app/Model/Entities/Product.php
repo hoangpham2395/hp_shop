@@ -34,4 +34,9 @@ class Product extends Base
 	{
 		return $this->hasOne('App\Model\Entities\Category', 'id', 'category_id');
 	}
+
+	public function images() 
+	{
+		return $this->hasMany('App\Model\Entities\ProductImage', 'product_id', 'id');
+	}
 }

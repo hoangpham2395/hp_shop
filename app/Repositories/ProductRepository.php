@@ -50,5 +50,12 @@ class ProductRepository extends CustomRepository
 		})
 		->paginate($this->getPerPage());
 	}
+
+	public function findById($id) 
+	{
+		return $this->with(['images' => function($query) {
+			$query->where('type', 1)->first();
+		}])->findWhere(['id' => $id])->first();
+	}
 }
 ?>

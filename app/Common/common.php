@@ -66,9 +66,9 @@ function getBreadcrumb($key)
 
 function logError($message, array $context = [])
 {
-	try {
-		ChannelLog::error('error', $message, $context);
-	} catch (\Exception $e) {
+	// try {
+	// 	ChannelLog::error('error', $message, $context);
+	// } catch (\Exception $e) {
 
-	}
+	// }
 }

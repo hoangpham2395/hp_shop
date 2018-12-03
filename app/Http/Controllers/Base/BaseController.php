@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Base;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\DB;
 
 /**
  * 
@@ -48,6 +49,17 @@ class BaseController extends Controller
     {
         Storage::disks('tmp')->put($fileName, $link);
     }
+
+    public function getNextId() 
+    {
+        try {
+            $statement = DB::select("show table status like '". $this->getAlias() ."'");
+            return !empty($statement[0]) ? array_get($statement, 0)->Auto_increment : 0;
+        } catch (\Exception $e) {
+            logError($e);
+            return 0;
+        }
+   }
 }
 
 ?>

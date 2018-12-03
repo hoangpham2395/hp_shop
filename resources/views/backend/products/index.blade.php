@@ -64,6 +64,7 @@
                                 <th>{{getTitle('products.product_name')}}</th>
                                 <th>{{getTitle('products.brand_id')}}</th>
                                 <th>{{getTitle('products.category_id')}}</th>
+                                <th>{{getTitle('products.color')}}</th>
                                 <th>{{getTitle('products.price')}}</th>
                                 <th width="50" class="text-center">Edit</th>
                                 <th width="50" class="text-center">Delete</th>
@@ -75,6 +76,7 @@
                                         <td><a href="{{route('products.show', $entity->id)}}">{{$entity->product_name}}</a></td>
                                         <td>{{ (!empty($entity->brand)) ? $entity->brand->brand_name : '' }}</td>
                                         <td>{{ (!empty($entity->category)) ? $entity->category->category_name : '' }}</td>
+                                        <td>{{ (!empty($entity)) ? $entity->color : '' }}</td>
                                         <td>{{ $entity->getPrice() }}</td>
                                         <td class="text-center">
                                             <a href="{{route('products.edit', $entity->id)}}" class="btn btn-sm btn-primary">

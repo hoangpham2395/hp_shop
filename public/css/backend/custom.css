@@ -118,3 +118,7 @@
 span.connect-input {
     padding: 8px 10px 0 10px;
 }
+
+.tab-pane-custom {
+    padding: 15px;
+}
