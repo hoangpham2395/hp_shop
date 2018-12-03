@@ -4,117 +4,389 @@
 
 @include('frontend.home._slide')
 
-<div class="ct-box20">
-    <a href="https://hungmobile.vn/xiaomi-mi-mix-3-2018-256gb-ram-8-xach-tay-gia-re.html"><img src="./index_files/mi-mix3-nho_5be002d85e3b0_05_11_2018_15_44_08.jpg" alt="" class="img-responsive"></a>
-    <div class="box-content">
-        <h3 style="font-size:17px;" class="product-name"><a href="https://hungmobile.vn/xiaomi-mi-mix-3-2018-256gb-ram-8-xach-tay-gia-re.html" class="pro-name">Xiaomi Mi Mix 3 (2018) 256GB Ram 8GB Mới Nguyên Seal</a></h3>
-        <p class="new-price">
-            14,090,000đ
-        </p>
-    </div>
-    <a href="https://hungmobile.vn/xiaomi-mi-mix-3-2018-256gb-ram-8-xach-tay-gia-re.html" style="display:inline-block">
-    </a><div class="box-detail" data-url="https://hungmobile.vn/xiaomi-mi-mix-3-2018-256gb-ram-8-xach-tay-gia-re.html"><a href="https://hungmobile.vn/xiaomi-mi-mix-3-2018-256gb-ram-8-xach-tay-gia-re.html" style="display:inline-block">
-    </a><a href="https://hungmobile.vn/xiaomi-mi-mix-3-2018-256gb-ram-8-xach-tay-gia-re.html" class="pro-name">Xiaomi Mi Mix 3 (2018) 256GB Ram 8GB Mới Nguyên Seal</a>
-    <p class="new-price">
-        14,090,000đ
-    </p>
+@include('frontend.home._best')
+
+<section id="content">
+    <div class="container-fluid">
+        <div class="ct-heading clearfix">
+            <h2 class="col-lg-2 col-md-4 col-sm-4 col-xs-6 cth2">Sản phẩm nổi bật</h2>
+            <div class="col-lg-5 col-md-4 col-sm-4 col-xs-3 ct-vendor">
+                <span class="hidden-lg btn-ul">Hãng: <i class="fa fa-caret-down"></i></span>
+                <ul class="ulh1">
+                    <li><h2><a href="https://hungmobile.vn/apple-iphone.html">iPhone</a></h2></li>
+                    <li><h2><a href="https://hungmobile.vn/samsung.html">Samsung</a></h2></li>
+                    <li><h2><a href="https://hungmobile.vn/xiaomi.html">Xiaomi</a></h2></li>
+                    <li><h2><a href="https://hungmobile.vn/sony.html">Sony</a></h2></li>
+                    <li><h2><a href="https://hungmobile.vn/nokia.html">Nokia</a></h2></li>
+                    <li><h2><a href="https://hungmobile.vn/hang-thanh-ly.html">Hàng Thanh Lý</a></h2></li>
+                </ul>
+            </div>
+            <div class="col-lg-5 col-md-4 col-sm-4 col-xs-3 ct-price">
+                <span class="hidden-lg btn-ul2">Giá: <i class="fa fa-caret-down"></i></span>
+                <ul class="ulh2">
+                    <li><h2><a href="https://hungmobile.vn/dien-thoai?range=1.html">Dưới 3 triệu</a></h2></li>
+                    <li><h2><a href="https://hungmobile.vn/dien-thoai?range=2.html">Từ 3 - 5 triệu</a></h2></li>
+                    <li><h2><a href="https://hungmobile.vn/dien-thoai?range=3.html">Từ 5 - 7 triệu</a></h2></li>
+                    <li class="ulh2-children hidden-md hidden-sm hidden-xs">
+                        <h2 class="btn-a"><a>Giá khác <span class="fa fa-caret-down"></span></a></h2>
+                        <ul class="ulh3">
+                            <li><h3><a href="https://hungmobile.vn/dien-thoai?range=4.html%22">Từ 7 - 9 triệu</a></h3></li>
+                            <li><h3><a href="https://hungmobile.vn/dien-thoai?range=5.html">Từ 9 - 12 triệu</a></h3></li>
+                            <li><h3><a href="https://hungmobile.vn/dien-thoai?range=6.html">Trên 12 triệu</a></h3></li>
+                        </ul>
+                    </li>
+                    <li class="hidden-lg"><h2><a href="https://hungmobile.vn/dien-thoai?range=4.html%22">Từ 7 - 9 triệu</a></h2></li>
+                    <li class="hidden-lg"><h2><a href="https://hungmobile.vn/dien-thoai?range=5.html">Từ 9 - 12 triệu</a></h2></li>
+                    <li class="hidden-lg"><h2><a href="https://hungmobile.vn/dien-thoai?range=6.html">Trên 12 triệu</a></h2></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="ct-product">
+            <div class="boder-pro">
+                <div class="ct-box20">
+                    <a href="https://hungmobile.vn/samsung-galaxy-note-9-512gb-xach-tay-han-quoc-cu.html"><img src="./index_files/note-9-xanh_5b7e71b332632_23_08_2018_15_34_59_5be637fef245e_10_11_2018_08_44_30.jpg" alt="" class="img-responsive"></a>
+                    <div class="box-content">
+                        <h3 style="font-size:17px;" class="product-name"><a href="https://hungmobile.vn/samsung-galaxy-note-9-512gb-xach-tay-han-quoc-cu.html" class="pro-name">Galaxy Note 9 Hàn 512GB Likenew (Đẹp 99%)</a></h3>
+                        <p class="new-price">
+                            14,890,000đ
+                        </p>
+                        <p class="old-price">Giá cũ:
+                            <span>17,090,000đ</span>
+                        </p>
+                    </div>
+                    <a href="https://hungmobile.vn/samsung-galaxy-note-9-512gb-xach-tay-han-quoc-cu.html" style="display:inline-block"></a>
+                    <div class="box-detail" data-url="https://hungmobile.vn/samsung-galaxy-note-9-512gb-xach-tay-han-quoc-cu.html">
+                        <a href="https://hungmobile.vn/samsung-galaxy-note-9-512gb-xach-tay-han-quoc-cu.html" style="display:inline-block"></a>
+                        <a href="https://hungmobile.vn/samsung-galaxy-note-9-512gb-xach-tay-han-quoc-cu.html" class="pro-name">Galaxy Note 9 Hàn 512GB Likenew (Đẹp 99%)</a>
+                        <p class="new-price">
+                            14,890,000đ
+                        </p>
+                        <p class="old-price">Giá cũ:
+                            <span>17,090,000đ</span>
+                        </p>
+                        <hr>
+                        <div>
+                            <div style="text-align: center;">
+                                <span style="font-size:16px">
+                                    <strong>
+                                        <a href="http://bitly.com/cmsn-hm-23-quan-hoa">
+                                            <span style="color:rgb(255, 0, 0)">MỪNG SINH NHẬT - GIẬT QUÀ TO</span>
+                                        </a>
+                                    </strong>
+                                    <span style="color:rgb(255, 0, 0)">
+                                        <strong>:&nbsp;(Áp dụng từ 27/11 - 02/12)</strong>
+                                    </span>
+                                </span>
+                            </div>
+                            <ul style="margin-left:40px">
+                                <li style="text-align:left">
+                                    Mua&nbsp;<a href="https://hungmobile.vn/nokia-x7.html">Nokia X7</a>&nbsp;giá chỉ 230K&nbsp;
+                                </li>
+                                <li style="text-align:left">
+                                    Mua&nbsp;<a href="https://hungmobile.vn/vong-deo-tay-thong-minh-xiaomi-mi-band-3.html">Mi band 3</a>&nbsp;giá chỉ 23K
+                                </li>
+                                <li style="text-align:left">Săn phụ kiện đồng giá từ 23K&nbsp;<em>(duy nhất ngày 02/12)</em></li>
+                                <li style="text-align:left">Tặng ngay Arun 5600mAh cho CS3: 690 Lê Hồng Phong</li>
+                            </ul>
+
+                            <p style="margin-left:80px">&gt;&gt; Chi tiết xem&nbsp;<em><strong><a href="http://bitly.com/cmsn-hm-23-quan-hoa" rel="nofollow">Tại Đây</a></strong></em></p>
+
+                            <p style="text-align:center"><strong><a href="http://khuyenmai.hungmobile.vn/samsung-xach-tay-so-1-viet-nam/" rel="nofollow" target="_blank"><span style="color:rgb(255, 0, 0)"><span style="font-size:16px">SAMSUNG XÁCH TAY SỐ 1 VIỆT NAM</span></span></a></strong></p>
+
+                            <p>-&nbsp;GÓI&nbsp;KM 1:&nbsp;Sạc + cáp Samsung&nbsp;chính hãng trị giá&nbsp;250.000 VNĐ, tai nghe Samsung J7&nbsp;trị giá&nbsp;100.000 VNĐ</p>
+                        </div>
+
+                        <p>-&nbsp;GÓI&nbsp;KM 2:&nbsp;Sạc + cáp Samsung&nbsp;chính hãng trị giá&nbsp;250.000 VNĐ, gậy selfie mini trị giá&nbsp;150.000 VNĐ</p>
+
+                        <p>- Tặng ngay que chọc sim cao cấp trị giá&nbsp;20.000 VNĐ</p>
+
+                        <p>​-&nbsp;TRẢ GÓP LÃI SUẤT 0%&nbsp;qua thẻ tín dụng.&nbsp;<a href="https://hungmobile.vn/mua-hang-tra-gop/samsung-galaxy-note-9-512gb-xach-tay-han-quoc-cu.html" rel="nofollow">Chi tiết.</a></p>
+
+                        <p>​-&nbsp;Giao Hàng&nbsp;COD Toàn Quốc&nbsp;(Nhận hàng và thanh toán&nbsp;tại nhà)&nbsp;
+                            <a href="https://hungmobile.vn/huong-dan-mua-hang-tu-xa.html" rel="nofollow" style="text-align: justify;">Xem chi tiết</a>
+                        </p>
+                   </div>
+                </div>
+                <div class="ct-box20">
+                    <a href="https://hungmobile.vn/nokia-x7-2018-128gb-ram-6gb-xach-tay-gia-re.html">
+                        <img src="./index_files/50d004e7d56b35356c7a_5be10a157730e_06_11_2018_10_27_17.jpg" alt="" class="img-responsive">
+                    </a>
+                    <div class="box-content">
+                        <h3 style="font-size:17px;" class="product-name">
+                            <a href="https://hungmobile.vn/nokia-x7-2018-128gb-ram-6gb-xach-tay-gia-re.html" class="pro-name">
+                                Nokia X7 (2018) 128GB, Ram 6GB mới Nguyên Seal
+                            </a>
+                        </h3>
+                        <p class="new-price">
+                            7,190,000đ
+                        </p>
+                        <p class="old-price">Giá cũ:
+                            <span>7,950,000đ</span>
+                        </p>
+                    </div>
+                    <a href="https://hungmobile.vn/nokia-x7-2018-128gb-ram-6gb-xach-tay-gia-re.html" style="display:inline-block"></a>
+                    <div class="box-detail" data-url="https://hungmobile.vn/nokia-x7-2018-128gb-ram-6gb-xach-tay-gia-re.html">
+                        <a href="https://hungmobile.vn/nokia-x7-2018-128gb-ram-6gb-xach-tay-gia-re.html" style="display:inline-block"></a>
+                        <a href="https://hungmobile.vn/nokia-x7-2018-128gb-ram-6gb-xach-tay-gia-re.html" class="pro-name">
+                            Nokia X7 (2018) 128GB, Ram 6GB mới Nguyên Seal
+                        </a>
+                        <p class="new-price">
+                            7,190,000đ
+                        </p>
+                        <p class="old-price">Giá cũ:
+                            <span>7,950,000đ</span>
+                        </p>
+                    
+                        <hr>
+                        <div style="text-align: center;">
+                            <span style="font-size:16px">
+                                <strong>
+                                    <a href="http://bitly.com/cmsn-hm-23-quan-hoa"><span style="color:rgb(255, 0, 0)">MỪNG SINH NHẬT - GIẬT QUÀ TO</span>
+                                    </a>
+                                </strong>
+                                <span style="color:rgb(255, 0, 0)">
+                                    <strong>:&nbsp;(Áp dụng từ 27/11 - 02/12)</strong>
+                                </span>
+                            </span>
+                        </div>
+
+                        <ul style="margin-left:40px">
+                            <li style="text-align:left">Mua&nbsp;<a href="https://hungmobile.vn/nokia-x7.html">Nokia X7</a>&nbsp;giá chỉ 230K&nbsp;</li>
+                            <li style="text-align:left">Mua&nbsp;<a href="https://hungmobile.vn/vong-deo-tay-thong-minh-xiaomi-mi-band-3.html">Mi band 3</a>&nbsp;giá chỉ 23K</li>
+                            <li style="text-align:left">Săn phụ kiện đồng giá từ 23K&nbsp;<em>(duy nhất ngày 02/12)</em></li>
+                            <li style="text-align:left">Tặng ngay Arun 5600mAh cho CS3: 690 Lê Hồng Phong</li>
+                        </ul>
+
+                        <p style="margin-left:80px">&gt;&gt; Chi tiết xem&nbsp;<em><strong><a href="http://bitly.com/cmsn-hm-23-quan-hoa" rel="nofollow">Tại Đây</a></strong></em></p>
+
+                        <hr>
+                        <p>- Tặng ngay&nbsp;COMBO 1 Trị Giá 250K&nbsp;(gậy Selfie +&nbsp;Kính CL +&nbsp;Thánh Sim 3G)&nbsp;hoặc&nbsp;COMBO 2&nbsp;Trị Giá 300K&nbsp;(tai nghe Piston + Kính CL)&nbsp;khi mua Bảo Hành Vàng&nbsp;<a href="https://hungmobile.vn/chinh-sach-bao-hanh.html#bao-hanh-nokia">(Chi tiết)</a></p>
+
+                        <p>- Tặng&nbsp;Ốp lưng Silicon&nbsp;chính hãng (kèm theo hộp)</p>
+
+                        <p>- Có Tiếng Việt và hỗ trợ mạng 4G đầy đủ.</p>
+
+                        <p>- Máy mới 100%, Hộp Nguyên Seal Niêm Phong của NSX.</p>
+
+                        <p>- Hỗ trợ&nbsp;Mua Trả Góp 0%&nbsp;qua thẻ tín dụng.&nbsp;<a href="https://hungmobile.vn/mua-hang-tra-gop/nokia-x7-2018-64gb-ram-6gb-gia-re.html" rel="nofollow" target="_blank">Chi tiết.</a></p>
+
+                        <p>​-&nbsp;Giao Hàng&nbsp;COD Toàn Quốc&nbsp;(Nhận hàng và thanh toán&nbsp;tại nhà)&nbsp;<a href="https://hungmobile.vn/huong-dan-mua-hang-tu-xa.html" rel="nofollow" style="text-align: justify;">Xem chi tiết</a></p>
+                    </div>
+                </div>
+                <div class="ct-box20">
+                    <a href="https://hungmobile.vn/iphone-se-16gb-quoc-te-cu-gia-re.html">
+                        <img src="./index_files/se_nhỏ_(1)_5bdc88403d3b4_03_11_2018_00_24_16.jpg" alt="" class="img-responsive">
+                    </a>
+                    <div class="box-content">
+                        <h3 style="font-size:17px;" class="product-name"><a href="https://hungmobile.vn/iphone-se-16gb-quoc-te-cu-gia-re.html" class="pro-name">iPhone SE 16GB Quốc Tế Likenew (Đẹp 99%)</a></h3>
+                        <p class="new-price">
+                            2,990,000đ
+                        </p>
+                        <p class="old-price">Giá cũ:
+                            <span>4,250,000đ</span>
+                        </p>
+                    </div>
+                    <a href="https://hungmobile.vn/iphone-se-16gb-quoc-te-cu-gia-re.html" style="display:inline-block"></a>
+                    <div class="box-detail" data-url="https://hungmobile.vn/iphone-se-16gb-quoc-te-cu-gia-re.html">
+                        <a href="https://hungmobile.vn/iphone-se-16gb-quoc-te-cu-gia-re.html" style="display:inline-block"></a>
+                        <a href="https://hungmobile.vn/iphone-se-16gb-quoc-te-cu-gia-re.html" class="pro-name">
+                            iPhone SE 16GB Quốc Tế Likenew (Đẹp 99%)
+                        </a>
+                        <p class="new-price">
+                            2,990,000đ
+                        </p>
+                        <p class="old-price">Giá cũ:
+                            <span>4,250,000đ</span>
+                        </p>
+            
+                        <hr>
+                        <div>
+                            <div style="text-align: center;">
+                                <span style="font-size:16px">
+                                    <strong>
+                                        <a href="http://bitly.com/cmsn-hm-23-quan-hoa">
+                                            <span style="color:rgb(255, 0, 0)">MỪNG SINH NHẬT - GIẬT QUÀ TO</span>
+                                        </a>
+                                    </strong>
+                                    <span style="color:rgb(255, 0, 0)">
+                                        <strong>:&nbsp;(Áp dụng từ 27/11 - 02/12)</strong>
+                                    </span>
+                                </span>
+                            </div>
+
+                            <ul style="margin-left:40px">
+                                <li style="text-align:left">Mua&nbsp;<a href="https://hungmobile.vn/nokia-x7.html">Nokia X7</a>&nbsp;giá chỉ 230K&nbsp;</li>
+                                <li style="text-align:left">Mua&nbsp;<a href="https://hungmobile.vn/vong-deo-tay-thong-minh-xiaomi-mi-band-3.html">Mi band 3</a>&nbsp;giá chỉ 23K</li>
+                                <li style="text-align:left">Săn phụ kiện đồng giá từ 23K&nbsp;<em>(duy nhất ngày 02/12)</em></li>
+                                <li style="text-align:left">Tặng ngay Arun 5600mAh cho CS3: 690 Lê Hồng Phong</li>
+                            </ul>
+
+                            <p style="margin-left:80px">&gt;&gt; Chi tiết xem&nbsp;<em><strong><a href="http://bitly.com/cmsn-hm-23-quan-hoa" rel="nofollow">Tại Đây</a></strong></em></p>
+
+                            <p style="text-align:center"><strong><span style="color:rgb(255, 0, 0)">1&nbsp;ĐỔI 1 TRONG 15 THÁNG (CẢ NGUỒN + MÀN HÌNH)</span></strong></p>
+
+                            <div>
+                                <p>- Tặng ngay bộ Sạc Cáp cao cấp trị giá&nbsp;250.000 VNĐ</p>
+                            </div>
+
+                            <p style="text-align:justify">- Tặng ngay que chọc Sim cao cấp trị giá&nbsp;20.000 VNĐ</p>
+
+                            <p style="text-align:justify">- Tặng ngay iRing cao cấp trị giá 30.000 VNĐ</p>
+
+                            <p style="text-align:justify">-&nbsp;TRẢ GÓP LÃI SUẤT 0%, qua thẻ tín dụng.&nbsp;<a href="https://hungmobile.vn/mua-hang-tra-gop/iphone-7-32gb-xach-tay-cu-gia-re.html" rel="nofollow">Xem chi tiết.</a></p>
+
+                            <p style="text-align:justify">-&nbsp;Giao Hàng&nbsp;COD Toàn Quốc&nbsp;(Nhận hàng và thanh toán tại nhà)&nbsp;<a href="https://hungmobile.vn/huong-dan-mua-hang-tu-xa.html" rel="nofollow">Xem chi tiết</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="ct-box20">
+                    <a href="https://hungmobile.vn/xiaomi-mi-mix-3-2018-256gb-ram-8-xach-tay-gia-re.html"><img src="./index_files/mi-mix3-nho_5be002d85e3b0_05_11_2018_15_44_08.jpg" alt="" class="img-responsive"></a>
+                    <div class="box-content">
+                        <h3 style="font-size:17px;" class="product-name"><a href="https://hungmobile.vn/xiaomi-mi-mix-3-2018-256gb-ram-8-xach-tay-gia-re.html" class="pro-name">Xiaomi Mi Mix 3 (2018) 256GB Ram 8GB Mới Nguyên Seal</a></h3>
+                        <p class="new-price">
+                            14,090,000đ
+                        </p>
+                    </div>
+                    <a href="https://hungmobile.vn/xiaomi-mi-mix-3-2018-256gb-ram-8-xach-tay-gia-re.html" style="display:inline-block"></a>
+                    <div class="box-detail" data-url="https://hungmobile.vn/xiaomi-mi-mix-3-2018-256gb-ram-8-xach-tay-gia-re.html">
+                        <a href="https://hungmobile.vn/xiaomi-mi-mix-3-2018-256gb-ram-8-xach-tay-gia-re.html" style="display:inline-block"></a>
+                        <a href="https://hungmobile.vn/xiaomi-mi-mix-3-2018-256gb-ram-8-xach-tay-gia-re.html" class="pro-name">Xiaomi Mi Mix 3 (2018) 256GB Ram 8GB Mới Nguyên Seal</a>
+                        <p class="new-price">
+                            14,090,000đ
+                        </p>
     
-    <hr>
-    <div style="text-align: center;">
-        <div><span style="font-size:16px"><strong><a href="http://bitly.com/cmsn-hm-23-quan-hoa"><span style="color:rgb(255, 0, 0)">MỪNG SINH NHẬT - GIẬT QUÀ TO</span></a></strong><span style="color:rgb(255, 0, 0)"><strong>:&nbsp;(Áp dụng từ 27/11 - 02/12)</strong></span></span></div>
+                        <hr>
+                        <div style="text-align: center;">
+                            <div>
+                                <span style="font-size:16px">
+                                    <strong>
+                                        <a href="http://bitly.com/cmsn-hm-23-quan-hoa">
+                                            <span style="color:rgb(255, 0, 0)">MỪNG SINH NHẬT - GIẬT QUÀ TO</span>
+                                        </a>
+                                    </strong>
+                                    <span style="color:rgb(255, 0, 0)">
+                                        <strong>:&nbsp;(Áp dụng từ 27/11 - 02/12)</strong>
+                                    </span>
+                                </span>
+                            </div>
 
-        <ul style="margin-left:40px">
-           <li style="text-align:left">Mua&nbsp;<a href="https://hungmobile.vn/nokia-x7.html">Nokia X7</a>&nbsp;giá chỉ 230K&nbsp;</li>
-           <li style="text-align:left">Mua&nbsp;<a href="https://hungmobile.vn/vong-deo-tay-thong-minh-xiaomi-mi-band-3.html">Mi band 3</a>&nbsp;giá chỉ 23K</li>
-           <li style="text-align:left">Săn phụ kiện đồng giá từ 23K&nbsp;<em>(duy nhất ngày 02/12)</em></li>
-           <li style="text-align:left">Tặng ngay Arun 5600mAh cho CS3: 690 Lê Hồng Phong</li>
-       </ul>
+                            <ul style="margin-left:40px">
+                                <li style="text-align:left">Mua&nbsp;<a href="https://hungmobile.vn/nokia-x7.html">Nokia X7</a>&nbsp;giá chỉ 230K&nbsp;</li>
+                                <li style="text-align:left">Mua&nbsp;<a href="https://hungmobile.vn/vong-deo-tay-thong-minh-xiaomi-mi-band-3.html">Mi band 3</a>&nbsp;giá chỉ 23K</li>
+                                <li style="text-align:left">Săn phụ kiện đồng giá từ 23K&nbsp;<em>(duy nhất ngày 02/12)</em></li>
+                                <li style="text-align:left">Tặng ngay Arun 5600mAh cho CS3: 690 Lê Hồng Phong</li>
+                            </ul>
 
-       <p style="margin-left:80px; text-align:left">&gt;&gt; Chi tiết xem&nbsp;<em><strong><a href="http://bitly.com/cmsn-hm-23-quan-hoa" rel="nofollow">Tại Đây</a></strong></em></p>
+                            <p style="margin-left:80px; text-align:left">&gt;&gt; Chi tiết xem&nbsp;<em><strong><a href="http://bitly.com/cmsn-hm-23-quan-hoa" rel="nofollow">Tại Đây</a></strong></em></p>
 
-       <hr>
-       <p style="text-align: left;">- Tặng ngay&nbsp;COMBO 1 Trị Giá 250K&nbsp;(gậy Selfie +&nbsp;Iring +&nbsp;Thánh Sim 3G)&nbsp;hoặc&nbsp;COMBO 2&nbsp;Trị Giá 300K&nbsp;(tai nghe Piston + Iring)&nbsp;khi mua Bảo Hành Vàng&nbsp;<a href="https://hungmobile.vn/chinh-sach-bao-hanh.html#bao-hanh-xiaomi" rel="nofollow">(Chi tiết)</a></p>
-   </div>
+                            <hr>
+                            <p style="text-align: left;">- Tặng ngay&nbsp;COMBO 1 Trị Giá 250K&nbsp;(gậy Selfie +&nbsp;Iring +&nbsp;Thánh Sim 3G)&nbsp;hoặc&nbsp;COMBO 2&nbsp;Trị Giá 300K&nbsp;(tai nghe Piston + Iring)&nbsp;khi mua Bảo Hành Vàng&nbsp;<a href="https://hungmobile.vn/chinh-sach-bao-hanh.html#bao-hanh-xiaomi" rel="nofollow">(Chi tiết)</a></p>
+                        </div>
 
-   <p style="text-align:justify">- Tặng&nbsp;Ốp Lưng&nbsp;chính hãng (kèm theo hộp)</p>
+                        <p style="text-align:justify">- Tặng&nbsp;Ốp Lưng&nbsp;chính hãng (kèm theo hộp)</p>
 
-   <p style="text-align:justify">-&nbsp;Giảm Giá 30%&nbsp;khi mua phụ kiện kèm theo</p>
+                        <p style="text-align:justify">-&nbsp;Giảm Giá 30%&nbsp;khi mua phụ kiện kèm theo</p>
 
-   <p style="text-align:justify">- Hỗ trợ&nbsp;Mua Trả Góp 0%&nbsp;qua thẻ tín dụng.</p>
+                        <p style="text-align:justify">- Hỗ trợ&nbsp;Mua Trả Góp 0%&nbsp;qua thẻ tín dụng.</p>
 
-   <p style="text-align:justify">-&nbsp;Giao Hàng&nbsp;COD Toàn Quốc&nbsp;(Nhận hàng và thanh toán tại nhà)&nbsp;<a href="https://hungmobile.vn/huong-dan-mua-hang-tu-xa.html" rel="nofollow">Xem chi tiết</a></p>
+                        <p style="text-align:justify">-&nbsp;Giao Hàng&nbsp;COD Toàn Quốc&nbsp;(Nhận hàng và thanh toán tại nhà)&nbsp;<a href="https://hungmobile.vn/huong-dan-mua-hang-tu-xa.html" rel="nofollow">Xem chi tiết</a></p>
 
-   <p>&nbsp;</p>
+                        <p>&nbsp;</p>
 
-</div>
+                    </div>
 
-</div>
-<div class="ct-box20">
-    <a href="https://hungmobile.vn/xiaomi-black-shark-helo-8gb-128gb-xach-tay-gia-re.html"><img src="./index_files/72f54e0f75f195afcce0_5bdacfafc05b4_01_11_2018_17_04_31.jpg" alt="" class="img-responsive"></a>
-    <div class="box-content">
-        <h3 style="font-size:17px;" class="product-name"><a href="https://hungmobile.vn/xiaomi-black-shark-helo-8gb-128gb-xach-tay-gia-re.html" class="pro-name">Black Shark Helo Ram 8GB 128GB Gaming Phone</a></h3>
-        <p class="new-price">
-            12,250,000đ
-        </p>
-    </div>
-    <a href="https://hungmobile.vn/xiaomi-black-shark-helo-8gb-128gb-xach-tay-gia-re.html" style="display:inline-block">
-    </a><div class="box-detail" data-url="https://hungmobile.vn/xiaomi-black-shark-helo-8gb-128gb-xach-tay-gia-re.html"><a href="https://hungmobile.vn/xiaomi-black-shark-helo-8gb-128gb-xach-tay-gia-re.html" style="display:inline-block">
-    </a><a href="https://hungmobile.vn/xiaomi-black-shark-helo-8gb-128gb-xach-tay-gia-re.html" class="pro-name">Black Shark Helo Ram 8GB 128GB Gaming Phone</a>
-    <p class="new-price">
-        12,250,000đ
-    </p>
+                </div>
+
+                <div class="ct-box20">
+                    <a href="https://hungmobile.vn/xiaomi-black-shark-helo-8gb-128gb-xach-tay-gia-re.html"><img src="./index_files/72f54e0f75f195afcce0_5bdacfafc05b4_01_11_2018_17_04_31.jpg" alt="" class="img-responsive"></a>
+                    <div class="box-content">
+                        <h3 style="font-size:17px;" class="product-name"><a href="https://hungmobile.vn/xiaomi-black-shark-helo-8gb-128gb-xach-tay-gia-re.html" class="pro-name">Black Shark Helo Ram 8GB 128GB Gaming Phone</a></h3>
+                        <p class="new-price">
+                            12,250,000đ
+                        </p>
+                    </div>
+                    <a href="https://hungmobile.vn/xiaomi-black-shark-helo-8gb-128gb-xach-tay-gia-re.html" style="display:inline-block"></a>
+                    <div class="box-detail" data-url="https://hungmobile.vn/xiaomi-black-shark-helo-8gb-128gb-xach-tay-gia-re.html">
+                        <a href="https://hungmobile.vn/xiaomi-black-shark-helo-8gb-128gb-xach-tay-gia-re.html" style="display:inline-block"></a>
+                        <a href="https://hungmobile.vn/xiaomi-black-shark-helo-8gb-128gb-xach-tay-gia-re.html" class="pro-name">Black Shark Helo Ram 8GB 128GB Gaming Phone</a>
+                        <p class="new-price">
+                            12,250,000đ
+                        </p>
     
-    <hr>
-    <div style="text-align: center;"><span style="font-size:16px"><strong><a href="http://bitly.com/cmsn-hm-23-quan-hoa"><span style="color:rgb(255, 0, 0)">MỪNG SINH NHẬT - GIẬT QUÀ TO</span></a></strong><span style="color:rgb(255, 0, 0)"><strong>:&nbsp;(Áp dụng từ 27/11 - 02/12)</strong></span></span></div>
+                        <hr>
+                        <div style="text-align: center;">
+                            <span style="font-size:16px">
+                                <strong>
+                                    <a href="http://bitly.com/cmsn-hm-23-quan-hoa">
+                                        <span style="color:rgb(255, 0, 0)">MỪNG SINH NHẬT - GIẬT QUÀ TO</span>
+                                    </a>
+                                </strong>
+                                <span style="color:rgb(255, 0, 0)">
+                                    <strong>:&nbsp;(Áp dụng từ 27/11 - 02/12)</strong>
+                                </span>
+                            </span>
+                        </div>
 
-    <ul style="margin-left:40px">
-       <li style="text-align:left">Mua&nbsp;<a href="https://hungmobile.vn/nokia-x7.html">Nokia X7</a>&nbsp;giá chỉ 230K&nbsp;</li>
-       <li style="text-align:left">Mua&nbsp;<a href="https://hungmobile.vn/vong-deo-tay-thong-minh-xiaomi-mi-band-3.html">Mi band 3</a>&nbsp;giá chỉ 23K</li>
-       <li style="text-align:left">Săn phụ kiện đồng giá từ 23K&nbsp;<em>(duy nhất ngày 02/12)</em></li>
-       <li style="text-align:left">Tặng ngay Arun 5600mAh cho CS3: 690 Lê Hồng Phong</li>
-   </ul>
+                        <ul style="margin-left:40px">
+                            <li style="text-align:left">Mua&nbsp;<a href="https://hungmobile.vn/nokia-x7.html">Nokia X7</a>&nbsp;giá chỉ 230K&nbsp;</li>
+                            <li style="text-align:left">Mua&nbsp;<a href="https://hungmobile.vn/vong-deo-tay-thong-minh-xiaomi-mi-band-3.html">Mi band 3</a>&nbsp;giá chỉ 23K</li>
+                            <li style="text-align:left">Săn phụ kiện đồng giá từ 23K&nbsp;<em>(duy nhất ngày 02/12)</em></li>
+                            <li style="text-align:left">Tặng ngay Arun 5600mAh cho CS3: 690 Lê Hồng Phong</li>
+                        </ul>
 
-   <p style="margin-left:80px">&gt;&gt; Chi tiết xem&nbsp;<em><strong><a href="http://bitly.com/cmsn-hm-23-quan-hoa" rel="nofollow">Tại Đây</a></strong></em></p>
+                        <p style="margin-left:80px">&gt;&gt; Chi tiết xem&nbsp;<em><strong><a href="http://bitly.com/cmsn-hm-23-quan-hoa" rel="nofollow">Tại Đây</a></strong></em></p>
 
-   <hr>
-   <p>- Tặng ngay&nbsp;COMBO 1 Trị Giá 250K&nbsp;(gậy Selfie&nbsp;+&nbsp;Thánh Sim 3G)&nbsp;hoặc&nbsp;COMBO 2&nbsp;Trị Giá 300K&nbsp;(tai nghe Piston + Thánh Sim 3G)&nbsp;khi mua Bảo Hành Vàng&nbsp;<a href="https://hungmobile.vn/chinh-sach-bao-hanh.html#bao-hanh-xiaomi" rel="nofollow">(Chi tiết)</a></p>
+                       <hr>
+                       <p>- Tặng ngay&nbsp;COMBO 1 Trị Giá 250K&nbsp;(gậy Selfie&nbsp;+&nbsp;Thánh Sim 3G)&nbsp;hoặc&nbsp;COMBO 2&nbsp;Trị Giá 300K&nbsp;(tai nghe Piston + Thánh Sim 3G)&nbsp;khi mua Bảo Hành Vàng&nbsp;<a href="https://hungmobile.vn/chinh-sach-bao-hanh.html#bao-hanh-xiaomi" rel="nofollow">(Chi tiết)</a></p>
 
-   <p style="text-align:justify">- Tặng&nbsp;GamePad&nbsp;chính hãng (kèm theo hộp)</p>
+                        <p style="text-align:justify">- Tặng&nbsp;GamePad&nbsp;chính hãng (kèm theo hộp)</p>
 
-   <p style="text-align:justify">- Tặng&nbsp;Ốp Lưng&nbsp;chính hãng (kèm theo hộp)</p>
+                        <p style="text-align:justify">- Tặng&nbsp;Ốp Lưng&nbsp;chính hãng (kèm theo hộp)</p>
 
-   <p style="text-align:justify">-&nbsp;Giảm Giá 30%&nbsp;khi mua phụ kiện kèm theo</p>
+                        <p style="text-align:justify">-&nbsp;Giảm Giá 30%&nbsp;khi mua phụ kiện kèm theo</p>
 
-   <p style="text-align:justify">-&nbsp;TRẢ GÓP LÃI SUẤT 0%&nbsp;qua thẻ tín dụng.&nbsp;<a href="https://hungmobile.vn/mua-hang-tra-gop/xiaomi-black-shark-helo-8gb-128gb-xach-tay-gia-re.html" rel="nofollow">Xem chi tiết</a></p>
+                        <p style="text-align:justify">-&nbsp;TRẢ GÓP LÃI SUẤT 0%&nbsp;qua thẻ tín dụng.&nbsp;<a href="https://hungmobile.vn/mua-hang-tra-gop/xiaomi-black-shark-helo-8gb-128gb-xach-tay-gia-re.html" rel="nofollow">Xem chi tiết</a></p>
 
-   <p style="text-align:justify">-&nbsp;Giao Hàng&nbsp;COD Toàn Quốc&nbsp;(Nhận hàng và thanh toán tại nhà)&nbsp;<a href="https://hungmobile.vn/huong-dan-mua-hang-tu-xa.html" rel="nofollow">Xem chi tiết</a></p>
+                        <p style="text-align:justify">-&nbsp;Giao Hàng&nbsp;COD Toàn Quốc&nbsp;(Nhận hàng và thanh toán tại nhà)&nbsp;<a href="https://hungmobile.vn/huong-dan-mua-hang-tu-xa.html" rel="nofollow">Xem chi tiết</a></p>
+                    </div>
+                </div>
 
-</div>
-
-</div>
-<div class="ct-box20">
-    <a href="https://hungmobile.vn/samsung-galaxy-a7-2018-chinh-hang-gia-re.html"><img src="./index_files/a7_2018_nhỏ_5bd51af321b45_28_10_2018_09_12_03.jpg" alt="" class="img-responsive"></a>
-    <div class="box-content">
-        <h3 style="font-size:17px;" class="product-name"><a href="https://hungmobile.vn/samsung-galaxy-a7-2018-chinh-hang-gia-re.html" class="pro-name">Samsung Galaxy A7 2018 Chính hãng FPT</a></h3>
-        <p class="new-price">
-            6,890,000đ
-        </p>
-        <p class="old-price">Giá cũ:
-            <span>7,690,000đ</span>
-        </p>
-    </div>
-    <a href="https://hungmobile.vn/samsung-galaxy-a7-2018-chinh-hang-gia-re.html" style="display:inline-block">
-    </a><div class="box-detail" data-url="https://hungmobile.vn/samsung-galaxy-a7-2018-chinh-hang-gia-re.html"><a href="https://hungmobile.vn/samsung-galaxy-a7-2018-chinh-hang-gia-re.html" style="display:inline-block">
-    </a><a href="https://hungmobile.vn/samsung-galaxy-a7-2018-chinh-hang-gia-re.html" class="pro-name">Samsung Galaxy A7 2018 Chính hãng FPT</a>
-    <p class="new-price">
-        6,890,000đ
-    </p>
-    <p class="old-price">Giá cũ:
-        <span>7,690,000đ</span>
-    </p>
-    
-    <hr>
-    <div style="text-align: center;"><span style="font-size:16px"><strong><a href="http://bitly.com/cmsn-hm-23-quan-hoa"><span style="color:rgb(255, 0, 0)">MỪNG SINH NHẬT - GIẬT QUÀ TO</span></a></strong><span style="color:rgb(255, 0, 0)"><strong>:&nbsp;(Áp dụng từ 27/11 - 02/12)</strong></span></span></div>
+                <div class="ct-box20">
+                    <a href="https://hungmobile.vn/samsung-galaxy-a7-2018-chinh-hang-gia-re.html"><img src="./index_files/a7_2018_nhỏ_5bd51af321b45_28_10_2018_09_12_03.jpg" alt="" class="img-responsive"></a>
+                    <div class="box-content">
+                        <h3 style="font-size:17px;" class="product-name"><a href="https://hungmobile.vn/samsung-galaxy-a7-2018-chinh-hang-gia-re.html" class="pro-name">Samsung Galaxy A7 2018 Chính hãng FPT</a></h3>
+                        <p class="new-price">
+                            6,890,000đ
+                        </p>
+                        <p class="old-price">Giá cũ:
+                            <span>7,690,000đ</span>
+                        </p>
+                    </div>
+                    <a href="https://hungmobile.vn/samsung-galaxy-a7-2018-chinh-hang-gia-re.html" style="display:inline-block"></a>
+                    <div class="box-detail" data-url="https://hungmobile.vn/samsung-galaxy-a7-2018-chinh-hang-gia-re.html">
+                        <a href="https://hungmobile.vn/samsung-galaxy-a7-2018-chinh-hang-gia-re.html" style="display:inline-block"></a>
+                        <a href="https://hungmobile.vn/samsung-galaxy-a7-2018-chinh-hang-gia-re.html" class="pro-name">Samsung Galaxy A7 2018 Chính hãng FPT</a>
+                        <p class="new-price">
+                            6,890,000đ
+                        </p>
+                        <p class="old-price">Giá cũ:
+                            <span>7,690,000đ</span>
+                        </p>
+                        
+                        <hr>
+                        <div style="text-align: center;">
+                            <span style="font-size:16px">
+                                <strong>
+                                    <a href="http://bitly.com/cmsn-hm-23-quan-hoa">
+                                        <span style="color:rgb(255, 0, 0)">MỪNG SINH NHẬT - GIẬT QUÀ TO</span>
+                                    </a>
+                                </strong>
+                                <span style="color:rgb(255, 0, 0)">
+                                    <strong>:&nbsp;(Áp dụng từ 27/11 - 02/12)</strong>
+                                </span>
+                            </span>
+                        </div>
 
     <ul style="margin-left:40px">
        <li style="text-align:left">Mua&nbsp;<a href="https://hungmobile.vn/nokia-x7.html">Nokia X7</a>&nbsp;giá chỉ 230K&nbsp;</li>
@@ -904,52 +1176,13 @@
         </div>
     </div>
     
-</div>
-<div class="ct-news">
-    <div class="row">
-        <div class="new-tile col-sm-12">
-            <span>Tin tức nổi bật</span>
-            <a href="https://hungmobile.vn/tin-moi-nhat.html" class="pull-right">Xem nhiều tin hơn</a>
-        </div>
+            </div>
 
-        <div class="col-sm-4 col-md-4 col-lg-4">
-           <div class="media">
-               <a class="pull-left" href="https://hungmobile.vn/so-sanh-nokia-x7-2018-xiaomi-mi-8-se-khi-nokia-di-truoc-xiaomi-mot-buoc.html">
-                   <img class="media-object" src="./index_files/dsc08523_copy_5be109a24e09e_06_11_2018_10_25_22_5be1756f1e4c6_06_11_2018_18_05_19.jpg" alt="Image">
-                   <div class=""></div>
-               </a>
-               <div class="media-body">
-                   <a href="https://hungmobile.vn/so-sanh-nokia-x7-2018-xiaomi-mi-8-se-khi-nokia-di-truoc-xiaomi-mot-buoc.html">So sánh Nokia X7 (2018)- Xiaomi Mi 8 SE: Khi Nokia đi trước Xiaomi một bước</a>
-               </div>
-           </div>
-       </div>
-       <div class="col-sm-4 col-md-4 col-lg-4">
-           <div class="media">
-               <a class="pull-left" href="https://hungmobile.vn/tong-hop-smartphone-nokia-x-quyet-kho-mau-de-gianh-lai-thi-truong.html">
-                   <img class="media-object" src="./index_files/nokia-x5-2018(08)_5b694563f17fa_07_08_2018_14_08_19_5bdd6a3c5ed41_03_11_2018_16_28_28.jpg" alt="Image">
-                   <div class=""></div>
-               </a>
-               <div class="media-body">
-                   <a href="https://hungmobile.vn/tong-hop-smartphone-nokia-x-quyet-kho-mau-de-gianh-lai-thi-truong.html">Tổng hợp smartphone Nokia X (2018):  Quyết khô máu để giành lại thị trường</a>
-               </div>
-           </div>
-       </div>
-       <div class="col-sm-4 col-md-4 col-lg-4">
-           <div class="media">
-               <a class="pull-left" href="https://hungmobile.vn/danh-gia-noia-x7-2018-va-5-cai-nhat-manh-nhat-uu-viet-nhat-tot-nhat-dau-tu-nhat-dep-nhat.html">
-                   <img class="media-object" src="./index_files/img_8162_5bd445a94698e_27_10_2018_18_02_01_5bdbacf1c5fe1_02_11_2018_08_48_33.jpg" alt="Image">
-                   <div class=""></div>
-               </a>
-               <div class="media-body">
-                   <a href="https://hungmobile.vn/danh-gia-noia-x7-2018-va-5-cai-nhat-manh-nhat-uu-viet-nhat-tot-nhat-dau-tu-nhat-dep-nhat.html">Câu chuyện Noia X7 2018 và 5 cái nhất: Mạnh nhất - Ưu Việt nhất - Tốt nhất - Đầu tư nhất - Đẹp nhất</a>
-               </div>
-           </div>
-       </div>
-       
-   </div>
-</div>
-</div>
-</div>
+            @include('frontend.home._news')
+
+            </div>
+        </div>
+    </div>
 </section>
 <input type="hidden" name="" value="1" id="home">
 
