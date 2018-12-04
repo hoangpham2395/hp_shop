@@ -47,11 +47,11 @@ return [
 		'name' => 'Jobs',
 		'index' => 'List of jobs',
 	],
-	'admin' => [
-		'name' => 'Admin',
-		'index' => 'List of admin',
-		'add' => 'Add new admin',
-		'edit' => 'Edit admin',
-		'show' => 'Detail admin',
+	'product_group' => [
+		'name' => 'Nhóm thông tin sản phẩm',
+		'index' => 'Danh sách nhóm thông tin sản phẩm',
+		'add' => 'Thêm mới',
+		'edit' => 'Cập nhật thông tin nhóm',
+		'delete' => 'Xóa nhóm',
 	],
 ];

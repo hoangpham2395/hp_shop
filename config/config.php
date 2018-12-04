@@ -30,5 +30,6 @@ return [
         2 => 'Ảnh bán chạy',
         3 => 'Ảnh slide',
     ],
+    'confirm_question' => 'Bạn có chắc không?',
 ];
 ?>

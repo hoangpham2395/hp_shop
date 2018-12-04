@@ -213,9 +213,4 @@ class ProductsController extends BackendController
         // Delete failed
         return redirect()->route($this->getAlias() . '.index')->withErrors(['delete_failed' => getMessaage('delete_failed')]);
 	}
-
-	public function attribute() 
-	{
-
-	}
 }

@@ -21,4 +21,9 @@ class ProductGroup extends Base
 		parent::boot();
 		static::addGlobalScope(new BaseScope);
 	}
+
+	public function setGroupAttribute($value) 
+	{
+		$this->attributes['group'] = strtoupper($value);
+	}
 }

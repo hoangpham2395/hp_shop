@@ -64,4 +64,8 @@ return [
         'material' => 'Chất liệu',
         'special' => 'Tính năng đặc biệt',
     ],
+    'product_group' => [
+        'id' => 'ID',
+        'group' => 'Nhóm thông tin sản phẩm',
+    ],
 ];
