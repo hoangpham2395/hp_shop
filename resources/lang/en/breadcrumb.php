@@ -13,6 +13,9 @@ return [
 		'add' => 'Add new product',
 		'edit' => 'Edit product',
 		'show' => 'Detail product',
+		'attribute' => 'Attributes',
+		'group' => 'Group',
+		'price' => 'Price',
 	],
 	'dashboard' => [
 		'name' => 'Dashboard',
