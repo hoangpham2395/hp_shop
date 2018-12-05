@@ -68,4 +68,13 @@ return [
         'id' => 'ID',
         'group' => 'Nhóm thông tin sản phẩm',
     ],
+    'product_attr' => [
+        'id' => 'ID',
+        'attr_name' => 'Thuộc tính',
+        'type' => 'Kiểu dữ liệu',
+        'is_null' => 'Rỗng',
+        'is_not_null' => 'Không rỗng',
+        'length' => 'Độ dài',
+        'group_id' => 'Nhóm thông tin sản phẩm',
+    ],
 ];

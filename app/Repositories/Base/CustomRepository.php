@@ -99,6 +99,37 @@ class CustomRepository extends BaseRepository
 
         return $this->parserResult($model);
     }
+
+    public function delete($id)
+    {
+	    $attributes = [
+	        'del_flag' => getConstant('DEL_FLAG.DELETED')
+        ];
+	    return $this->update($attributes, $id);
+    }
+
+    public function getList()
+    {
+        return $this->all();
+    }
+
+    public function getListForSelect($columnId, $columnName)
+    {
+        $list = $this->all([$columnId, $columnName]);
+
+        if (empty($list)) {
+            return [];
+        }
+
+        $list =$list->toArray();
+
+        $result = [];
+        foreach ($list as $item) {
+            $result[array_get($item, $columnId)] = array_get($item, $columnName);
+        }
+
+        return $result;
+    }
 }
 
 ?>

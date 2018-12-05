@@ -1,5 +1,6 @@
 <?php
 return [
+    'select_option' => 'Vui lòng chọn ...',
     // Image
 	'avatar_default' => '/images/avatar.png',
 	'no_image' => '/images/placeholder.png',
@@ -31,5 +32,19 @@ return [
         3 => 'Ảnh slide',
     ],
     'confirm_question' => 'Bạn có chắc không?',
+    'attr_type' => [
+        1 => 'Text',
+        2 => 'Email',
+        3 => 'Select',
+        4 => 'Radio',
+        5 => 'Checkbox',
+        6 => 'Textarea',
+        7 => 'Hidden',
+        8 => 'Password'
+    ],
+    'attr_is_null' => [
+        0 => 'Không rỗng', // not null
+        1 => 'Rỗng', // null
+    ],
 ];
 ?>

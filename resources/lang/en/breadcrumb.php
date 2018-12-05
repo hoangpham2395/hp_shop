@@ -54,4 +54,11 @@ return [
 		'edit' => 'Cập nhật thông tin nhóm',
 		'delete' => 'Xóa nhóm',
 	],
+    'product_attr' => [
+        'name' => 'Thuộc tính sản phẩm',
+        'index' => 'Danh sách thuộc tính sản phẩm',
+        'add' => 'Thêm mới',
+        'edit' => 'Cập nhật thông tin',
+        'delete' => 'Xóa thuộc tính',
+    ],
 ];

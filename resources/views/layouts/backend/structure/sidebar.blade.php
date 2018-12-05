@@ -29,7 +29,7 @@
                 <ul class="treeview-menu">
                     <li><a href="{{route('products.index')}}"><i class="fa fa-list-ul"></i> {{getBreadcrumb('products.index')}}</a></li>
                     <li><a href="{{route('products.create')}}"><i class="fa fa-plus"></i> {{getBreadcrumb('products.add')}}</a></li>
-                    <li><a href="{{route('products.attribute')}}"><i class="fa fa-cog"></i> {{getBreadcrumb('products.attribute')}}</a></li>
+                    <li><a href="{{route('product_attr.index')}}"><i class="fa fa-cog"></i> {{getBreadcrumb('products.attribute')}}</a></li>
                     <li><a href="{{route('product_group.index')}}"><i class="fa fa-cogs"></i> {{getBreadcrumb('products.group')}}</a></li>
                     <li><a href="{{route('products.price')}}"><i class="fa fa-usd"></i> {{getBreadcrumb('products.price')}}</a></li>
                 </ul>

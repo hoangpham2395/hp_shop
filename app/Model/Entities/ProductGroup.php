@@ -24,6 +24,11 @@ class ProductGroup extends Base
 
 	public function setGroupAttribute($value) 
 	{
-		$this->attributes['group'] = strtoupper($value);
+		$this->attributes['group'] = ucfirst($value);
 	}
+
+	public function attributes()
+    {
+        return $this->hasMany('\App\Model\Entities\ProductAttribute', 'group_id');
+    }
 }
