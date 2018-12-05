@@ -15,6 +15,7 @@ class AddColumnsTableProductPrice extends Migration
     {
         Schema::table('product_price', function (Blueprint $table) {
             $table->char('origin', 1)->default(1)->after('quantity');
+            $table->string('warranty', 256)->after('origin');
         });
     }
 
@@ -27,6 +28,7 @@ class AddColumnsTableProductPrice extends Migration
     {
         Schema::table('product_price', function (Blueprint $table) {
             $table->dropColumn('origin');
+            $table->dropColumn('warranty');
         });
     }
 }
