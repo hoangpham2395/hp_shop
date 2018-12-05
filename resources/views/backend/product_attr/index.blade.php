@@ -16,7 +16,7 @@
                     <div class="box-body">
                         {!! Form::open(['route' => 'product_attr.index', 'method' => 'GET']) !!}
                         <div class="row">
-                            <div class="col-md-12">
+                            <div class="col-md-6">
                                 <div class="form-group">
                                     {!! Form::label('attr_name', getTitle('product_attr.attr_name')) !!}
                                     <div class="input-group">
@@ -24,6 +24,17 @@
 												<i class="fa fa-bullseye"></i>
 											</span>
                                         {!! Form::text('attr_name', Request::input('attr_name'), ['class' => 'form-control']) !!}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    {!! Form::label('group_id', getTitle('product_attr.group_id')) !!}
+                                    <div class="input-group">
+											<span class="input-group-addon">
+												<i class="fa fa-cogs"></i>
+											</span>
+                                        {!! Form::select('group_id', $params['groups'], Request::input('group_id'), ['class' => 'form-control']) !!}
                                     </div>
                                 </div>
                             </div>
