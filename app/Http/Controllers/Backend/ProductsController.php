@@ -11,6 +11,8 @@ use App\Repositories\BrandRepository;
 use App\Repositories\CategoryRepository;
 use App\Repositories\ProductImageRepository;
 use App\Repositories\ProductPriceRepository;
+use App\Repositories\ProductAttributeRepository;
+use App\Repositories\ProductValueRepository;
 use Illuminate\Support\Facades\DB;
 use Session;
 
@@ -23,6 +25,8 @@ class ProductsController extends BackendController
 	protected $_categoryRepository;
 	protected $_productImageRepository;
 	protected $_productPriceRepository;
+    protected $_productAttributeRepository;
+    protected $_productValueRepository;
 
 	public function getBrandRepository() 
 	{
@@ -64,13 +68,35 @@ class ProductsController extends BackendController
         $this->_productPriceRepository = $productPriceRepository;
     }
 
+    public function getProductAttributeRepository()
+    {
+        return $this->_productAttributeRepository;
+    }
+
+    public function setProductAttributeRepository($productAttributeRepository)
+    {
+        $this->_productAttributeRepository = $productAttributeRepository;
+    }
+
+    public function getProductValueRepository()
+    {
+        return $this->_productValueRepository;
+    }
+
+    public function setProductValueRepository($productValueRepository)
+    {
+        $this->_productValueRepository = $productValueRepository;
+    }
+
 	public function __construct(ProductRepository $productRepository, 
 								ProductValidator $productValidator, 
 								Product $product, 
 								BrandRepository $brandRepository, 
 								CategoryRepository $categoryRepository,
 								ProductImageRepository $productImageRepository,
-                                ProductPriceRepository $productPriceRepository)
+                                ProductPriceRepository $productPriceRepository,
+                                ProductAttributeRepository $productAttributeRepository,
+                                ProductValueRepository $productValueRepository)
 	{
 		$this->setRepository($productRepository);
 		$this->setValidator($productValidator);
@@ -79,6 +105,8 @@ class ProductsController extends BackendController
 		$this->setCategoryRepository($categoryRepository);
 		$this->setProductImageRepository($productImageRepository);
 		$this->setProductPriceRepository($productPriceRepository);
+        $this->setProductAttributeRepository($productAttributeRepository);
+        $this->setProductValueRepository($productValueRepository);
 		parent::__construct();
 	}
 
@@ -86,6 +114,7 @@ class ProductsController extends BackendController
 	{
 		$brands = $this->getBrandRepository()->getListForDropDown();
 		$categories = $this->getCategoryRepository()->getListForDropDown();
+        $productAttrs = $this->getProductAttributeRepository()->getListForProduct();
 		$params = [
 			'brands' => $brands,
 			'categories' => $categories,
