@@ -10,6 +10,7 @@ use Illuminate\Http\Request;
 use App\Repositories\BrandRepository;
 use App\Repositories\CategoryRepository;
 use App\Repositories\ProductImageRepository;
+use App\Repositories\ProductPriceRepository;
 use Illuminate\Support\Facades\DB;
 use Session;
 
@@ -21,6 +22,7 @@ class ProductsController extends BackendController
 	protected $_brandRepository;
 	protected $_categoryRepository;
 	protected $_productImageRepository;
+	protected $_productPriceRepository;
 
 	public function getBrandRepository() 
 	{
@@ -52,12 +54,23 @@ class ProductsController extends BackendController
 		$this->_productImageRepository = $productImageRepository;
 	}
 
+    public function getProductPriceRepository()
+    {
+        return $this->_productPriceRepository;
+    }
+
+    public function setProductPriceRepository($productPriceRepository)
+    {
+        $this->_productPriceRepository = $productPriceRepository;
+    }
+
 	public function __construct(ProductRepository $productRepository, 
 								ProductValidator $productValidator, 
 								Product $product, 
 								BrandRepository $brandRepository, 
 								CategoryRepository $categoryRepository,
-								ProductImageRepository $productImageRepository) 
+								ProductImageRepository $productImageRepository,
+                                ProductPriceRepository $productPriceRepository)
 	{
 		$this->setRepository($productRepository);
 		$this->setValidator($productValidator);
@@ -65,6 +78,7 @@ class ProductsController extends BackendController
 		$this->setBrandRepository($brandRepository);
 		$this->setCategoryRepository($categoryRepository);
 		$this->setProductImageRepository($productImageRepository);
+		$this->setProductPriceRepository($productPriceRepository);
 		parent::__construct();
 	}
 
@@ -100,19 +114,28 @@ class ProductsController extends BackendController
         DB::beginTransaction();
         try {
             $nextId = $this->getNextId();
+            $this->getRepository()->create($data);
 
             // Add image in product_images
             if ($request->hasFile('image')) {
-            	$dataImage = [
+                $dataImage = [
 	            	'product_id' => $nextId,
 	            	'image' => $data['image'], 
 	            	'type' => 1, 
 	            	'ins_id' => getCurrentAdminId()
 	            ];
-	            $this->getProductImageRepository()->create($dataImage);
+                $this->getProductImageRepository()->create($dataImage);
             }
 
-            $this->getRepository()->create($data);
+            // Add to product price
+            $productPrices = array_get($data, 'ProductPrice');
+            if (!empty($productPrices)) {
+                foreach ($productPrices as $productPrice) {
+                    $productPrice['product_id'] = $nextId;
+                    $this->getProductPriceRepository()->add($productPrice);
+                }
+            }
+
             // Move file to medias if exist
             $this->_moveToMediasIfExist($data);
             DB::commit();
