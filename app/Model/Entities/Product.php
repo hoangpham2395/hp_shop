@@ -15,7 +15,7 @@ class Product extends Base
 
 	protected $table = 'products';
 	protected $primaryKey = 'id';
-	protected $fillable = ['product_name', 'brand_id', 'category_id', 'ins_id', 'upd_id', 'del_flag'];
+	protected $fillable = ['product_name', 'brand_id', 'category_id', 'model', 'made_in', 'ins_id', 'upd_id', 'del_flag'];
 	protected $_alias = 'products';
 
 	// Add global scope

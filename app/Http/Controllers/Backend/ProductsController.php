@@ -132,7 +132,7 @@ class ProductsController extends BackendController
             if (!empty($productPrices)) {
                 foreach ($productPrices as $productPrice) {
                     $productPrice['product_id'] = $nextId;
-                    $this->getProductPriceRepository()->add($productPrice);
+                    $this->getProductPriceRepository()->create($productPrice);
                 }
             }
 

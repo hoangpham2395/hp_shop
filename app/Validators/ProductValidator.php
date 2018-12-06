@@ -8,13 +8,13 @@ class ProductValidator extends BaseValidator {
 
     protected $rules = [
     	'product_name' => 'required',
-    	'quantity' => 'required|numeric|min:0',
+//    	'quantity' => 'required|numeric|min:0',
     	'brand_id' => 'required',
     	'category_id' => 'required',
-    	'price' => 'required|numeric|min:1',
+//    	'price' => 'required|numeric|min:1',
     	'model' => 'required',
-    	'origin' => 'required',
+//    	'origin' => 'required',
     	'made_in' => 'required',
-    	'warranty' => 'required'
+//    	'warranty' => 'required'
     ];
 }
