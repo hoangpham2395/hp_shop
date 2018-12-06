@@ -18,6 +18,8 @@ return [
 		'attribute' => 'Thuộc tính',
 		'group' => 'Nhóm thuộc tính',
 		'price' => 'Price',
+        'add_option' => 'Thêm tùy chọn',
+        'delete_option' => 'Xóa tùy chọn',
 	],
 	'dashboard' => [
 		'name' => 'Dashboard',

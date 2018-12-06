@@ -63,6 +63,7 @@ return [
         'design' => 'Thiết kế',
         'material' => 'Chất liệu',
         'special' => 'Tính năng đặc biệt',
+        'option' => 'Tùy chọn',
     ],
     'product_group' => [
         'id' => 'ID',

@@ -14,3 +14,4 @@
 <script src="{{asset('js/vendor/icheck.min.js')}}"></script>
 <!-- My js -->
 <script src="{{asset('js/backend/system.js')}}"></script>
+<script src="{{asset('js/backend/product.js')}}"></script>

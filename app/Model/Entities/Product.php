@@ -39,4 +39,9 @@ class Product extends Base
 	{
 		return $this->hasMany('App\Model\Entities\ProductImage', 'product_id', 'id');
 	}
+
+	public function productPrices()
+    {
+        return $this->hasMany('App\Model\Entities\ProductPrice', 'product_id');
+    }
 }
