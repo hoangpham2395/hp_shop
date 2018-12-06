@@ -16,7 +16,7 @@ var ProductController = {
      * @param newName
      */
     replacePrefix: function (selector, prefix, newName) {
-        $(selector).find('input, select, div, tr, button, label').each(function () {
+        $(selector).find('input, select, div, tr, button, label, textarea').each(function () {
             var pattern = /_prefix_/gm;
 
             // change name

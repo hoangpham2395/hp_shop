@@ -21,28 +21,26 @@ class ProductAttributeRepository extends CustomRepository
         return ProductAttributeValidator::class;
     }
 
-    public function getListForProduct() 
+    public function getListByGroups($groups = []) 
     {
+    	if (empty($groups)) {
+    		return [];
+    	}
+
     	$attrs = $this->all();
 
     	if (empty($attrs)) {
     		return [];
     	}
 
-    	$groups = [];
-
-    	foreach($attrs as $attr) {
-    		$groups[] = $attr->group_id;
-    	}
-
     	$result = [];
 
-    	foreach($groups as $group) {
+    	foreach($groups as $groupId => $group) {
     		foreach ($attrs as $attr) {
-    			if ($attr->group_id != $group) {
+    			if ($attr->group_id != $groupId) {
     				continue;
     			}
-				$result[$group][$attr->id] = $attr->attr_name;
+				$result[$groupId][$attr->id] = $attr->attr_name;
     		}
     	}
     	return $result;

@@ -13,6 +13,7 @@ use App\Repositories\ProductImageRepository;
 use App\Repositories\ProductPriceRepository;
 use App\Repositories\ProductAttributeRepository;
 use App\Repositories\ProductValueRepository;
+use App\Repositories\ProductGroupRepository;
 use Illuminate\Support\Facades\DB;
 use Session;
 
@@ -27,6 +28,7 @@ class ProductsController extends BackendController
 	protected $_productPriceRepository;
     protected $_productAttributeRepository;
     protected $_productValueRepository;
+    protected $_productGroupRepository;
 
 	public function getBrandRepository() 
 	{
@@ -88,6 +90,16 @@ class ProductsController extends BackendController
         $this->_productValueRepository = $productValueRepository;
     }
 
+    public function setProductGroupRepository($productGroupRepository)
+    {
+        $this->_productGroupRepository = $productGroupRepository;
+    }
+
+    public function getProductGroupRepository()
+    {
+        return $this->_productGroupRepository;
+    }
+
 	public function __construct(ProductRepository $productRepository, 
 								ProductValidator $productValidator, 
 								Product $product, 
@@ -96,7 +108,8 @@ class ProductsController extends BackendController
 								ProductImageRepository $productImageRepository,
                                 ProductPriceRepository $productPriceRepository,
                                 ProductAttributeRepository $productAttributeRepository,
-                                ProductValueRepository $productValueRepository)
+                                ProductValueRepository $productValueRepository,
+                                ProductGroupRepository $productGroupRepository)
 	{
 		$this->setRepository($productRepository);
 		$this->setValidator($productValidator);
@@ -107,6 +120,7 @@ class ProductsController extends BackendController
 		$this->setProductPriceRepository($productPriceRepository);
         $this->setProductAttributeRepository($productAttributeRepository);
         $this->setProductValueRepository($productValueRepository);
+        $this->setProductGroupRepository($productGroupRepository);
 		parent::__construct();
 	}
 
@@ -114,12 +128,15 @@ class ProductsController extends BackendController
 	{
 		$brands = $this->getBrandRepository()->getListForDropDown();
 		$categories = $this->getCategoryRepository()->getListForDropDown();
-        $productAttrs = $this->getProductAttributeRepository()->getListForProduct();
+        $groups = $this->getProductGroupRepository()->getListForSelect('id', 'group');
+        $productAttrs = $this->getProductAttributeRepository()->getListByGroups($groups);
 		$params = [
 			'brands' => $brands,
 			'categories' => $categories,
 			'origin' => getConfig('origin'),
 			'type_sim' => getConfig('type_sim'),
+            'groups' => $groups,
+            'attrs' => $productAttrs,
 		];
 		$params = array_merge($params, parent::_prepareData());
 		return $params;
@@ -127,7 +144,7 @@ class ProductsController extends BackendController
 
 	public function store(Request $request) 
 	{
-        $data = $request->all();
+        $data = $request->all(); dd($data);
 
         // Upload file to tmp folder if exist
         $this->_uploadToTmpIfExist($request);
@@ -161,7 +178,22 @@ class ProductsController extends BackendController
             if (!empty($productPrices)) {
                 foreach ($productPrices as $productPrice) {
                     $productPrice['product_id'] = $nextId;
+                    $productPrice['ins_id'] = getCurrentAdmin();
                     $this->getProductPriceRepository()->create($productPrice);
+                }
+            }
+
+            // Add to product value
+            $productValues = array_get($data, 'ProductValue');
+            if (!empty($productValues)) {
+                foreach ($productValues as $attrId => $productValue) {
+                    $dataPV = [
+                        'product_id' => $nextId,
+                        'attr_id' => $attrId,
+                        'value' => $productValue,
+                        'ins_id' => getCurrentAdminId()
+                    ];
+                    $this->getProductValueRepository()->create($dataPV);
                 }
             }
 
