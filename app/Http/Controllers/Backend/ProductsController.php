@@ -144,7 +144,7 @@ class ProductsController extends BackendController
 
 	public function store(Request $request) 
 	{
-        $data = $request->all(); dd($data);
+        $data = $request->all();
 
         // Upload file to tmp folder if exist
         $this->_uploadToTmpIfExist($request);

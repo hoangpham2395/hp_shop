@@ -85,9 +85,11 @@
                 </div>
             </div>
             <div class="row">
-                <button type="button" class="btn btn-success" onclick="ProductController.addNewProductOption(this)">
-                    <i class="fa fa-plus"></i> {{getBreadcrumb('products.add_option')}}
-                </button>
+                <div class="col-md-12">
+                    <button type="button" class="btn btn-success" onclick="ProductController.addNewProductOption(this)">
+                        <i class="fa fa-plus"></i> {{getBreadcrumb('products.add_option')}}
+                    </button>
+                </div>
             </div>
 
             <div id="model_product_option" class="hidden">

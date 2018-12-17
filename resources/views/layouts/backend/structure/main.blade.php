@@ -6,6 +6,7 @@
     <title>{{getConstant('APP_NAME')}} | Administrator</title>
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     @include('layouts.backend.load.css')
+    @include('layouts.backend.load.js')
 </head>
 <body class="hold-transition skin-red sidebar-mini">
 <div class="wrapper">
@@ -24,7 +25,5 @@
     @include('layouts.backend.structure.footer')
 </div>
 <!-- ./wrapper -->
-
-@include('layouts.backend.load.js')
 </body>
 </html>

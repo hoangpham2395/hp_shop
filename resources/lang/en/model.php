@@ -78,4 +78,15 @@ return [
         'length' => 'Độ dài',
         'group_id' => 'Nhóm thông tin sản phẩm',
     ],
+    'product_price' => [
+        'id' => 'ID',
+        'product_id' => 'Sản phẩm',
+        'color' => 'Màu sắc',
+        'price' => 'Giá',
+        'sale' => 'Khuyến mãi',
+        'quantity' => 'Số lượng',
+        'origin' => 'Nguồn gốc',
+        'warranty' => 'Bảo hành',
+        'image' => 'Hình ảnh',
+    ],
 ];

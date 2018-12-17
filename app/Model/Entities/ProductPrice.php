@@ -12,7 +12,7 @@ class ProductPrice extends Base
 {
 	protected $table = 'product_price';
 	protected $primaryKey = 'id';
-	protected $fillable = ['product_id', 'color', 'price', 'sale', 'quantity', 'ins_id', 'upd_id', 'del_flag'];
+	protected $fillable = ['product_id', 'color', 'price', 'sale', 'quantity', 'origin', 'warranty', 'image', 'ins_id', 'upd_id', 'del_flag'];
 	protected $_alias = 'product_price';
 
 	// Add global scope
