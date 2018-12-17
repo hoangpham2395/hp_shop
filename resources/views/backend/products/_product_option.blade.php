@@ -52,7 +52,7 @@
                             <div class="input-group">
                                 <span class="input-group-addon"><i class="fa fa-handshake-o"></i></span>
                                 {!! Form::text('ProductPrice['.$index.'][warranty]', null, ['class' => 'form-control', 'placeholder' => getTitle('product_price.warranty')]) !!}
-                            </div>warranty
+                            </div>
                         </div>
                     </div>
                     <div class="col-md-6">
